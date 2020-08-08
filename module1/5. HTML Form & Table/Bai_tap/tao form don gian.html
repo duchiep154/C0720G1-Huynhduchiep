@@ -5,10 +5,44 @@
     <title>Tạo form đơn giản</title>
 </head>
 <body>
-<form action="/action_page.php" method="post">
-    <h1><span style="color: white; background-color: orange">Sở thích của bạn</h1>
-    <p>Họ và Tên <input type="text" name="yourname"/></p>
-    <p>Email    <span style="text-align: center"><input type="text" name="email"/></span></p>
-</form>
+   <form action="/action_page.php" method="post">
+     <fieldset>
+        <legend><h1><span style="color: white; background-color: orange">Sở thích của bạn</span></h1></legend>
+           <label style="color:blue"> Họ và Tên :</label>
+               <input type="text" name="yourname"/><br><br>
+           <label style="color:blue"> Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+               <input type="text" name="email" value="" /> <br><br>
+           <label style="color:blue"> Sở thích:    <label style="color:orange">
+               <input name="hobby" value="sport" type="checkbox"/> Thể Thao</label> <label style="color:orange"><input name="hobby" value="music" type="checkbox"/> Âm nhạc</label> <label style="color:orange"><input name="hobby" value="reading" type="checkbox"/> Đọc sách</label><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:orange"><input name="hobby" value="web" type="checkbox"/> Lướt web</label> <label style="color:orange"><input name="hobby" value="game" type="checkbox"/> chơi game</label> <label style="color:orange"><input name="hobby" value="movie" type="checkbox"/> điện ảnh</label><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:orange"><input name="hobby" value="travel" type="checkbox"/> Du lịch</label>   </label><br>
+           <input type="submit" value="Gửi thông tin"/> <input type="reset" value="Nhập lại"/>
+     </fieldset>
+     <fieldset>
+         <legend><h1 style="color:blue">Đăng ký học viên</h1></legend>
+         <label style="color:blue" for="fullNameId">Họ và tên</label>
+               <input id="fullNameId" type="text" name="fullName" value=""/><br><br>
+         <label style="color:blue">Ngày Sinh </label>
+               <input type="text" name="birthday" value=""/><br><br>
+         <label style="color:blue">giới tính</label>
+               <input type="radio" name="gender" value="male" /> <label>Nam</label>
+               <input type="radio" name="gender" value="female" /> <label>Nữ</label><br><br>
+         <label style="color:blue">Địa chỉ</label><br>
+             <textarea cols="50" rows="4"> </textarea><br><br>
+         <label style="color:blue">Lớp :</label>
+           <select name="chọn lớp">
+           <option value="LA">lớp A</option>
+           <option value="LB">Lớp B</option>
+           <option value="LC">Lớp C</option>
+           <option value="LD">Lớp D</option>
+           <option value="F">Lớp F</option>
+          </select><br><br>
+         <label style="color:blue">Email :</label>
+               <input type="text" name="email" value=""/>
+         <label style="color:blue">Điện thoại :</label>
+               <input type="text" name="phone" value=""/><br><br>
+         <input type="submit" value="Đăng ký"/> <input type="reset" value="Nhập lại"/>
+     </fieldset>
+   </form>
 </body>
 </html>
