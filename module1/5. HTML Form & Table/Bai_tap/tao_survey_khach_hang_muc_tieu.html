@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form lấy survey khách hàng
+        Mục tiêu</title>
+</head>
+<body>
+      <h1>Market Research Survey</h1>
+      <p style="font-size:100%;">Please take a few moments to complete this satisfaction survey.</p><br>
+  <form action="action_page.php" method="post">
+       <p><b>What is your age range? </b></p>
+         <select id="age" name="age">
+             <option value="18-24">18-24</option>
+             <option value="25-34">25-34</option>
+             <option value="35-50">35-50</option>
+             <option value="50+">50+</option>
+         </select><br>
+      <p><b>What is your yearly income range? </b></p>
+         <select name="money">
+             <option value="$0-$25,000">$0 - 25,000</option>
+             <option value="$25001-$50000">$25,000 - $50,000</option>
+             <option value="$500001-$100000">$50,001-$100,000</option>
+             <option value="$100000+">$100,000+</option>
+         </select><br>
+      <p><b>Gender Identity</b></p>
+         <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label><br>
+         <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label><br>
+         <input type="radio" id="nonbinary" name="gender" value="nonbinary">
+          <label for="nonbinary">Nonbinary</label><br>
+         <input type="radio" name="gender" value="">
+          <label>Other</label><br>
+         <input type="text" name="gender" value=""><br>
+          Maximum of 250 characters. Currently Used:0 charaters <br>
+      <p><b>Which of the following products have your purchased in the last 2 months. Please check all that apply. </b></p>
+          <label for="product1"></label><input type="checkbox" id="product1" name="product1" value="Product1"/>
+          <label for="Product1">Product1</label> <br>
+          <label for="product2"></label><input type="checkbox" id="product2" name="product2" value="Product2"/>
+          <label for="Product2">Product2</label><br>
+          <label for="product3"></label><input type="checkbox" id="product3" name="product" value="Product3"/>
+          <label for="Product3">Product3</label><br>
+      <p><b>How often would you use our new product?</b></p>
+        <input type="radio" id="Daily" name="day" value="">
+          <label for="Daily">Daily</label><br>
+        <input type="radio" id="Weekly" name="week" value="">
+          <label for="Weekly">Weerly</label><br>
+        <input type="radio" id="Monthly" name="month" value="">
+          <label for="Monthly">Monthly</label><br>
+      <p><b>What would you pay for the new product?</b></p>
+         <label>$</label>
+           <input type="text" name="Dollars" value size="5"><label>.</label><label>
+      <input type="text" name="cents" value size="1">
+         </label><br>
+      &nbsp;&nbsp;&nbsp;Dollars &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cents<br>
+      <p><b>What features would you like to see in the new product</b></p>
+      <textarea cols="50" rows="4"></textarea>
+      <p>please rate your level of agreement with the following statements.</p>
+      <table border="1">
+          <tr>
+              <th></th>
+              <th><b>Strongly Disagree</b></th>
+              <th><b>Disagree</b></th>
+              <th><b>agree</b></th>
+              <th><b>Strongly Agree</b></th>
+          </tr>
+          <tr>
+              <td><b>Our products are price fairly</b>.</td>
+              <td style="text-align:center;"><input type="radio" name="strongly disagree" value="" ><br>
+                  1</td></td>
+              <td style="text-align:center;"><input type="radio" name="disagree" value="" ><br>
+                  2</td></td>
+              <td style="text-align:center;"><input type="radio" name="agree" value="" ><br>
+                  3</td></td>
+              <td style="text-align:center;"><input type="radio" name="Strongly agree" value="" ><br>
+                  4</td></td>
+           </tr>
+          <tr>
+              <td><b>Our products are High quality.</b></td>
+              <td style="text-align:center;"><input type="radio" name="strongly disagree" value="" ><br>
+                  1</td></td>
+              <td style="text-align:center;"><input type="radio" name="disagree" value="" ><br>
+                  2</td></td>
+              <td style="text-align:center;"><input type="radio" name="agree" value="" ><br>
+                  3</td></td>
+              <td style="text-align:center;"><input type="radio" name="Strongly agree" value="" ><br>
+                  4</td></td>
+          </tr>
+          <tr>
+              <td><b>you would recommend our product to a friend or coworker.</b></td>
+              <td style="text-align:center;"><input type="radio" name="strongly disagree" value="" ><br>
+                  1</td>
+              <td style="text-align:center;"><input type="radio" name="disagree" value="" ><br>
+                  2</td></td>
+              <td style="text-align:center;"><input type="radio" name="agree" value="" ><br>
+                  3</td></td>
+              <td style="text-align:center;"><input type="radio" name="Strongly agree" value="" ><br>
+                  4</td></td>
+          </tr>
+      </table>
+      <p><input type = "button" name="btSubmit" value="Submit"/></p>
+  </form>
+</body>
+</html>
