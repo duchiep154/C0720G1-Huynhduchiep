@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen tien te</title>
+</head>
+<body>
+   <form>
+     <h1>chuyển đổi tiền tệ</h1>
+       <label style="margin-left: 65px">Amout</label>
+       <label style="margin-left: 100px">From Currency</label>
+       <label style="margin-left: 40px">To Currency</label>
+       <br>
+       <input id="Amount" type="text" name="Amount">
+       <select id="fromCurrency" style="margin-left:70px ">
+           <option id="Dollars" value="USD">USD</option>
+           <option id="Vietnam" value="VND">VND</option>
+       </select>
+       <select id="toCurrency" style="margin-left:80px ">
+           <option id="Vietnam" value="VND">VND</option>
+           <option id="Dollars" value="USD">USD</option>
+       </select>
+       <button type="button" value="convert" onclick="chuyenDoiTien()" style="margin-left:100px ; background-color: #3e5eff" >Convert</button>
+       <p id="hienthi"></p>
+   </form>
+<script>
+    /* function chuyenDoiTien() {
+        let Amount = document.getElementById("Amount").value;
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        let Result = 0
+        if ((fromCurrency === "USD") && (toCurrency === "VND")) {
+            Result = Amount * 23000;
+        } else if ((fromCurrency === "VND") && (toCurrency === "USD")) {
+            Result = Amount / 23000;
+        } else {
+            Result = Amount;
+        }
+        document.getElementById("hienthi").innerHTML = Result
+    }*/
+    function chuyenDoiTien() {
+        let Amount = parseFloat(document.getElementById("Amount").value);
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        //alert(fromCurrency+toCurrency);
+        if ((fromCurrency === "USD") && (toCurrency === "VND")) {
+            document.getElementById("hienthi").innerHTML = "Result:" + Amount * 23000;
+        } else if ((fromCurrency === "VND") && (toCurrency === "USD")) {
+            //alert("sfsfs")
+            document.getElementById("hienthi").innerHTML = "Result:" + Amount / 23000;
+        } else {
+            document.getElementById("hienthi").innerHTML = "Result:" + Amount;
+        }
+    }
+</script>
+
+
+</body>
+</html>

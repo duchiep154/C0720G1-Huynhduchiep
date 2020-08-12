@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung may tinh</title>
+</head>
+<body>
+  <form>
+      <h1>Caculator</h1>
+      <input id="number1" type="text" name="number1">
+      <input id="number2" type="text" name="number2"><br><br>
+      <button type="button" value="cong" onclick="thucHienPhepCong()">Addition(+)</button>
+      <button type="button" value="tru" onclick="thucHienPhepTru()">Subtraction(-)</button>
+      <button type="button" value="nhan" onclick="thucHienPhepNhan()">Multiplication(X)</button>
+      <button type="button" value="chia" onclick="thucHienPhepChia()">Division</button><br><br>
+      <p id="ketqua"></p>
+
+  </form>
+<script>
+
+    function thucHienPhepCong() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+
+        document.getElementById("ketqua").innerHTML = "Result Addition :" + (number1 + number2);
+    }
+    function thucHienPhepTru() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        document.getElementById("ketqua").innerHTML = "Result Subtraction :" + (number1 - number2);
+    }
+    function thucHienPhepNhan() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        document.getElementById("ketqua").innerHTML = "Result Multiplication :" + (number1 * number2);
+
+    }
+    function thucHienPhepChia() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        document.getElementById("ketqua").innerHTML = "Result Division :" + (number1 / number2);
+
+    }
+</script>
+</body>
+</html>
