@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6: Giải phương trình bậc 1</title>
+</head>
+<body>
+
+<script>
+
+    let a =parseInt(prompt("giải phương trình có dạng aX+b=0 mời   nhập a :"));
+    let b =parseInt(prompt(" mơi nhập b"));
+    if (a == 0 && b != 0) {
+        alert('Phương trình ' + a + ' x + ' + b + ' = 0 vô nghiệm');
+    } else if (a == 0 && b == 0) {
+        alert('Phương trình ' + a + ' x + ' + b + ' = 0 có vô số nghiệm');
+    }
+    else {
+        alert('Phương trình '+ a + ' x + ' + b + ' = 0 có nghiệm x = ' + (-b/a));
+    }
+</script>
+
+</body>
+</html>

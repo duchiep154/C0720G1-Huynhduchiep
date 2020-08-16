@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<body>
+<script>
+    let ds = parseFloat(prompt('Nhập doanh số  của bạn:'));
+    if ( ds > 200000 ) {
+        alert('Số hoa hồng bạn nhận được là:' + (ds * 5 / 100) + 'đồng' );
+    }   else if (ds > 500000) {
+        alert('Số hoa hồng bạn nhận được là:' + (ds * 10 / 100) + 'đồng');
+    }   else if (ds > 1000000) {
+        alert('Số hoa hồng bạn nhận được là:' + (ds * 15 / 100) + 'đồng');
+    }   else {
+        alert('Số hoa hồng bạn nhận được là:' + (ds * 0 / 100) + ' đồng');
+    }
+</script>
+
+</body>
+</html>

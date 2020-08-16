@@ -17,10 +17,38 @@
     let peopleInclude=prompt('8.nhập số người đi kèm');
     let rentDay=prompt('9.nhâp số ngày ở lại');
     let serviceRoom=prompt('10.nhập loại dịch vụ phòng');
-    let roomType=prompt('11.nhâp loại phòng thuê');
+    let roomType = prompt('loại phòng khách sạn :');
+    let villa =500;
+    let house =300;
+    let room =100;
+
 
 
     // Task 2: hiển thị thông tin kèm giá
+    let total=0;
+    if (roomType = villa)
+        total = rentDay * 500 * (1 - discount / 100);
+
+    if (roomType = house)
+        total = rentDay * 300 * (1 - discount / 100);
+
+    if (roomType = room)
+        total = rentDay * 100 * (1 - discount / 100);
+
+    alert("Thông tin nhập vào:\n " +
+        "01. Tên khách hàng: " + name + "\n" +
+        "02. Số CMND: " + id + "\n" +
+        "03. Ngày tháng năm sinh: " + birthday + "\n" +
+        "04. Địa chỉ Email: " + email + "\n" +
+        "05. Địa chỉ khác hàng: " + address + "\n" +
+        "06. Cấp độ khách hàng: " + custumerType + "\n" +
+        "07. Phần trăm giảm giá: " + discount + "\n"  +
+        "08. Số lượng khác hàng: " + peopleInclude + "\n" +
+        "09. Số ngày thuê: " + rentDay + "\n" +
+        "10. Loại hình dịch vụ: " + serviceRoom + "\n" +
+        "11. Loại phòng khách cần: " + roomType + "\n" +
+        "12. Tổng số tiền phải thanh toán: " + "$" + total
+    );
 
 
 

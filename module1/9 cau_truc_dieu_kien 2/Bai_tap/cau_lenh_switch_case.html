@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau lenh switch case</title>
+</head>
+<body>
+<form>
+    <input  type="number" id="month" value="Month">
+    <button type="button" onclick="tinhSoNgay()">Tính số ngày trong tháng</button>
+    <p>
+    <h2 id="hienthi">sô ngày trong tháng là :</h2></p>
+</form>
+<script>
+    function tinhSoNgay() {
+        let month = parseInt(document.getElementById("month").value);
+        switch (month) {
+            case 1:
+                document.getElementById("hienthi").innerHTML ="tháng 1 có 31 ngày";
+                break;
+            case 3:
+                document.getElementById("hienthi").innerHTML ="tháng 3 có 31 ngày";
+                break;
+            case 5:
+                document.getElementById("hienthi").innerHTML ="tháng 5 có 31 ngày";
+                break;
+            case 7:
+                document.getElementById("hienthi").innerHTML ="tháng 7 có 31 ngày";
+                break;
+            case 8:
+                document.getElementById("hienthi").innerHTML ="tháng 8 có 31 ngày";
+                break;
+            case 10:
+                document.getElementById("hienthi").innerHTML ="tháng 10 có 31 ngày";
+                break;
+            case 12:
+                document.getElementById("hienthi").innerHTML ="tháng 12 có 31 ngày";
+                break;
+            case 2 :
+                document.getElementById("hienthi").innerHTML = "sô ngày trong tháng là 28,29";
+                break;
+            case 4 :
+                document.getElementById("hienthi").innerHTML ="tháng 4 có 30 ngày";
+                break;
+            case 6 :
+                document.getElementById("hienthi").innerHTML ="tháng 6 có 30 ngày";
+                break;
+            case 9 :
+                document.getElementById("hienthi").innerHTML ="tháng 9 có 30 ngày";
+                break;
+            case 10:
+                document.getElementById("hienthi").innerHTML ="tháng 10 có 30 ngày";
+                break;
+            default:
+                document.getElementById("hienthi").innerHTML = "không phải là tháng";
+                break;
+        }
+    }
+</script>
+</body>
+</html>

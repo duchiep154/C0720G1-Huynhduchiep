@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao may tinh don gian</title>
+</head>
+<body>
+<form>
+    <input id="screen" name="screen" style="width: 205px;height: 50px" value="" type="text">
+    <br>
+    <br>
+    <input type="button" value="1" style="width: 50px;height: 50px;color: blue" onclick="number1()">
+    <input type="button" value="2" style="width: 50px;height: 50px;color: blue" onclick="number2()">
+    <input type="button" value="3" style="width: 50px;height: 50px;color: blue" onclick="number3()">
+    <input type="button" value="+" style="width: 50px;height: 50px;color: blue" onclick="cong()">
+    <br>
+    <br>
+    <input type="button" value="4" style="width: 50px;height: 50px;color: blue" onclick="number4()">
+    <input type="button" value="5" style="width: 50px;height: 50px;color: blue" onclick="number5()">
+    <input type="button" value="6" style="width: 50px;height: 50px;color: blue" onclick="number6()">
+    <input type="button" value="-" style="width: 50px;height: 50px;color: blue" onclick="tru()">
+    <br>
+    <br>
+    <input type="button" value="7" style="width: 50px;height: 50px;color: blue" onclick="number7()">
+    <input type="button" value="8" style="width: 50px;height: 50px;color: blue" onclick="number8()">
+    <input type="button" value="9" style="width: 50px;height: 50px;color: blue" onclick="number9()">
+    <input type="button" value="X" style="width: 50px;height: 50px;color: blue" onclick="nhan()">
+    <br>
+    <br>
+    <input type="reset" value="C" style="width: 50px;height: 50px;color: blue" onclick="clear()">
+    <input type="button" value="0" style="width: 50px;height: 50px;color: blue" onclick="number0()">
+    <input type="button" value="=" style="width: 50px;height: 50px;color: blue" onclick="tinh()">
+    <input type="button" value="/" style="width: 50px;height: 50px;color: blue" onclick="chia()">
+</form>
+<script>
+    function number1() {
+        document.getElementById("screen").value +=1;
+    }
+    function number2() {
+        document.getElementById("screen").value +=2;
+    }
+    function number3() {
+        document.getElementById("screen").value +=3;
+    }
+    function number4() {
+        document.getElementById("screen").value +=4;
+
+    }
+    function number5() {
+        document.getElementById("screen").value +=5;
+
+    }
+    function number6() {
+        document.getElementById("screen").value +=6;
+
+    }
+    function number7() {
+        document.getElementById("screen").value +=7;
+
+    }
+    function number8() {
+        document.getElementById("screen").value +=8;
+
+    }
+    function number9() {
+        document.getElementById("screen").value +=9;
+
+    }
+    function number0() {
+        document.getElementById("screen").value +=0;
+    }
+    function cong() {
+        document.getElementById("screen").value +="+";
+    }
+    function tru() {
+        document.getElementById("screen").value +="-";
+    }
+    function nhan() {
+        document.getElementById("screen").value +="*";
+    }
+    function chia() {
+        document.getElementById("screen").value +="/";
+    }
+    function tinh() {
+        let string = document.getElementById("screen").value;
+        result=eval(string);
+        document.getElementById("screen").value =result;
+    }
+</script>
+
+
+</body>
+</html>

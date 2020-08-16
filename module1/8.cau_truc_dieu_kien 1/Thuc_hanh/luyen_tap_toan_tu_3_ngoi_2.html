@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình nhập vào giá trị cho chuỗi message</title>
+</head>
+<body>
+<script>
+   // thuc hanh chuyen qua toan tu 3 ngoi
+   /* let login = prompt("moi ban nhap:");
+
+    if (login == 'Employee') {
+        message = 'Hello';
+        alert(message);
+    } else if (login == 'Director') {
+        message = 'Greetings';
+        alert(message);
+    } else if (login == '') {
+        message = 'No login';
+        alert(message);
+    } else {
+        message = '';
+        alert(message);
+    } */
+
+
+    let login = prompt("moi ban nhap");
+   let message = (login == 'Employee') ?
+       'Hello' :
+       (login == 'Director') ?
+           'Greetings' :
+           (login == '') ?
+               'No login' :
+               '';
+   alert(message)
+</script>
+
+</body>
+</html>

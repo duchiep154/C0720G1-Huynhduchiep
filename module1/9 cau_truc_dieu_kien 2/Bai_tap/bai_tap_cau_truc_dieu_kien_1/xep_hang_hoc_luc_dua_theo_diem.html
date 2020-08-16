@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập điểm bài kiểm tra 1 tiết"));
+    let b = parseInt(prompt("Nhập điểm bài thi giữa kỳ"));
+    let c = parseInt(prompt("Nhập điểm thi cuối kỳ"));
+    diemtb = (a + b + c)/3;
+    if (diemtb > 8.0){
+        alert("Bạn đạt danh hiệu học sinh giỏi");
+    }else if (diemtb > 6.5){
+        alert("Bạn đạt danh hiệu học sinh khá");
+    }else if (diemtb > 5.0){
+        alert("Bạn đạt danh hiệu học sinh trung bình");
+    }else if (diemtb > 3.0){
+        alert("Bạn đạt danh hiệu học sinh yếu");
+    }else {
+        alert("Bạn đạt danh hiệu học sinh kém")
+    }
+</script>
+
+</body>
+</html>

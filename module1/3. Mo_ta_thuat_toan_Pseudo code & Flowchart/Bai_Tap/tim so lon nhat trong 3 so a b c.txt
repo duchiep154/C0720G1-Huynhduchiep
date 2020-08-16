@@ -1,0 +1,18 @@
+Begin
+   input(a,b,c)
+   max=0
+   if(a>b)then
+          if(a>c)then
+              max=a;
+         else
+             max=c
+         endif
+   else
+         if(b>c)then
+              max=b;
+         else
+             max=c
+         endif
+    endif
+    Displlay max
+End
