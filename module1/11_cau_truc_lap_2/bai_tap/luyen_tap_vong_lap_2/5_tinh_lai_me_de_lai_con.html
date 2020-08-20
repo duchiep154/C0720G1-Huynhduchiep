@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lai me de lai con</title>
+</head>
+<body>
+<script>
+    let tienVay =parseInt(prompt("nhập số tiền vay ( đơn vị triệu )"));
+    let thang =parseInt(prompt("nhập số tháng vay"));
+    let lai =parseFloat(prompt("nhập lãi suất vay % 1 tháng"));
+    let laiGop = tienVay * (1 + lai /100) ** thang ;
+    alert("tổng tiền phải nhận là : " + laiGop + "triệu đồng" )
+
+</script>
+
+</body>
+</html>
