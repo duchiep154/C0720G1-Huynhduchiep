@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in day finonaci</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let d = a + b;
+    let count= parseInt(prompt("nhập so  mun in"));
+    document.write(a + "  " + b+ " " );
+    for (i = 1; i <= count; i++) {
+        let c = a + b;
+        d = d + c;
+        document.write(c + "  ");
+        a = b;
+        b = c;
+    }
+</script>
+</body>
+</html>

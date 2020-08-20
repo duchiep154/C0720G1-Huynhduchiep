@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+    <h1>Game doan so</h1>
+    <button type="button" onclick="clickMe()">CLICK TO PLAY</button>
+<script>
+    function clickMe() {
+        let a=parseInt(prompt("so trong khoang tu "));
+        let b=parseInt(prompt("so trong khoang den "));
+        let random=Math.ceil((b-a)* Math.random()) + a;
+        for (i=1 ;i<=3;i++){
+            let d=parseInt(prompt("moi nhap so du doan"));
+            if (d== random){
+                alert("ban da doan dung");
+                break;
+            }else if (d<random){
+                alert("so ban nhap nho qua");
+            }else {
+                alert("so ban nhap lon qua");
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>

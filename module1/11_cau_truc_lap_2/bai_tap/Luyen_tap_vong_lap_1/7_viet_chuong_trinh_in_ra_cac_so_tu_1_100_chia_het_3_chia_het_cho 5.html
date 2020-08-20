@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>một chương trình in ra các số từ 1 đến 100</title>
+</head>
+<body>
+<script>
+    let count =1;
+    let result ="";
+    for (; count <=100; count++) {
+        if (count % 3 ==0 && count % 5==0){
+            result+= "FizzBuzz <br>";
+        }else if (count % 3 ==0){
+            result+="Fizz <br>";
+        }else if (count % 5 ==0){
+            result+="Buzz <br>";
+        }else {
+            result+= count + "<br>";
+        }
+    }
+    document.write(result);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in 20 so nguyen to dau tien</title>
+</head>
+<body>
+<script>
+    let num=20;
+    let count=0;
+    let N=2;
+    let soNguyenTo="";
+    while (count < num ) {
+        let check=true;
+        for (let i = 2; i < N ; i++){
+            if (N % i ==0){
+                check=false;
+                break;
+            }
+        }
+        if (check){
+            soNguyenTo += N + ", ";
+            count++;
+        }
+        N++;
+    }
+    document.write("daỹ số nguyên tố cần tìm là :" + soNguyenTo);
+
+
+</script>
+
+</body>
+</html>

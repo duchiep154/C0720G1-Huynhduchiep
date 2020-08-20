@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lấy thông tin nhiệt độ hiện tại</title>
+</head>
+<body>
+<script>
+    let c=parseInt(prompt("nhap nhiet do"));
+    for (;;) {
+
+        if (c>100){
+            c=prompt("nhiet do qua cao moi nhap lai");
+        }else if (c<20){
+            c=prompt("nhiet do qua thap moi nhap lai");
+        }
+        else {
+            alert("nhiet do thich hop");
+            break ;
+        }
+    }
+
+</script>
+
+</body>
+</html>

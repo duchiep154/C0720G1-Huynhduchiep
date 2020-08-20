@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in tam giac vuông</title>
+</head>
+<body>
+<script>
+    for (i =0 ;i <5 ; i++){
+        document.write("<br>" + "*" + " ");
+        for ( j=0 ; j < 5;j++){
+            if (j < i){
+                document.write("*" + " ");
+            }
+        }
+    }
+
+    document.write("<br>");
+    for (i=0;i<5;i++){
+        document.write("<br>" + "*" + " ");
+        for (j=4 ;j>0 ; j--){
+            if (i<j) {
+                document.write("*" + " ");
+            }
+        }
+    }
+    document.write("<br>");
+
+    for ( i = 0; i<10 ;i++){
+        document.write("<br>" + " ");
+        for (j=10;j>0;j--) {
+            if (i<j) {
+                document.write("*" + " ");
+            }else
+                document.write("&nbsp&nbsp");
+        }
+    }
+    document.write("<br>");
+
+
+    for (i=0 ;i<10;i++);{
+        document.write("<br>" + " ");
+        for (j=0;j<10;j++) {
+            if (j>i) {
+                document.write("*" + " ");
+            }else
+                document.write("&nbsp&nbsp");
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>
