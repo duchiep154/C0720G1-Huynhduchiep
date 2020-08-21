@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi thứ nhất:");
+    let b = prompt("Nhập chuỗi thứ 2: ");
+    let array1 = a.split();
+    let array2 = b.split();
+    let flag = true;
+    for (let i = 0; i < array1.length; i++){
+        if (array1[i] !== array2[i]){
+            flag = false;
+            break;
+        }
+    }
+    if (flag){
+        alert("2 chuỗi giống nhau");
+    }
+    else {
+        alert("2 chuỗi không giống nhau");
+    }
+</script>
+
+</body>
+</html>

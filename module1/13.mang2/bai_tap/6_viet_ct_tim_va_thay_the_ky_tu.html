@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</title>
+</head>
+<body>
+<script>
+    let a = new Array(5);
+    for (let i = 0; i < a.length; i++){
+        a[i] = prompt("Nhập a[" + i + "]: ");
+    }
+    flag = true;
+    for (let i = 0; i <a.length; i++){
+        if (a[i] == "-"){
+            a[i] = "_";
+            flag = false;
+        }
+    }
+    if (flag = false){
+        alert("Chuỗi sau khi thay thế: " + array);
+    } else {
+        alert("Không tìm thấy '-' trong chuỗi");
+    }
+</script>
+
+</body>
+</html>

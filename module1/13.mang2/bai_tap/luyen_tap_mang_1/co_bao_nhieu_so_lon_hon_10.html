@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khởi tạo mảng số nguyên gồm 10 phần tử</title>
+</head>
+<body>
+<script>
+    let x= new Array();
+    for (let i= 1;i<=10 ; i++){
+        x[i]=parseInt(prompt(" nhap 10 so"))
+    }
+    let kq=0;
+    for (let i=1 ; i<x.length; i++){
+        if (x[i]>=10){
+            kq=kq+1;
+        }
+    }
+    alert("co" + kq + " lon hon 10");
+</script>
+
+</body>
+</html>

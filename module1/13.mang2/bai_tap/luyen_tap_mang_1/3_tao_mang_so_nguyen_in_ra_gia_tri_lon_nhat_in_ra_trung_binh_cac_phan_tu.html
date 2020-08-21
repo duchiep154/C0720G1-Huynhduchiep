@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt("nhap do dai cua mang"));
+    let x= new Array(n);
+    let tong=0;
+    let tbc=0;
+    for (let i = 0 ; i <x.length;i++){
+        x[i]=parseInt(prompt("nhap phan tu cua mang"));
+    }
+    for (let i=1 ;i<x.length ;i++){
+            tong+= x[i];
+            tbc= tong / x.length;
+    }
+    alert("tong cac so la : "+ tong + "trung  binh cong cua cac so la:"+ tbc);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> tạo va nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<script>
+    let n= parseInt(prompt("nhap do dai mang"));
+    let x= new Array(n);
+    let soDauTien=0;
+    let soCuoiCung=x.length;
+    for (let i=0 ; i<x.length; i++){
+        x[i]= parseInt(prompt("nhap cac phan tu"));
+    }
+    while (soDauTien<soCuoiCung) {
+        let b=x[soDauTien];
+        x[soDauTien]=x[soCuoiCung];
+        x[soCuoiCung]=b;
+        soDauTien++;
+        soCuoiCung--;
+    }
+    alert(x);
+</script>
+
+</body>
+</html>

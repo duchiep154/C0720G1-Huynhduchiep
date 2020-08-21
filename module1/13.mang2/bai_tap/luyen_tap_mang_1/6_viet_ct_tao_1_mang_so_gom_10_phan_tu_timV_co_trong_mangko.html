@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array(5);
+    for (let i = 0; i < array.length; i++){
+        array[i] = prompt("Nhập a[" + i + "]: ");
+    }
+    let V = parseInt(prompt("Nhập số nguyên V:"));
+    for (let j = 0; j < array.length; j++){
+        if (array[j] == V){
+            alert(V + " is in the array");
+        }
+    }
+</script>
+
+</body>
+</html>

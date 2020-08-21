@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+<script>
+    let n= parseInt(prompt("nhap do dai"));
+    let array=new Array(n);
+    for (let i=0 ; i<array.length ;i ++){
+        array[i]=parseInt(prompt("nhap phan tu"));
+    }
+    let dem=0;
+    for (let i=0 ;i<array.length;i++){
+        if (array[i]<0){
+            dem++;
+            document.write(array[i]+ "la so nguyen am"+"<br>");
+        }
+    }
+    alert("co" + dem + "so nguyen am");
+</script>
+</body>
+</html>

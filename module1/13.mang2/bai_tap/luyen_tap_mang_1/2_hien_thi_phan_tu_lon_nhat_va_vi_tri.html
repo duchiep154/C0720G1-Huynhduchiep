@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt("nhap do dai"));
+    let x=new Array(a);
+    for (let i=0 ; i < x.length; i++){
+        x[i]=parseInt(prompt("nhap so phan tu"));
+    }
+    let max=x[0];
+    let index=0;
+    for (let i=0 ; i< x.length ;i++){
+        if (x[i]>max){
+            max=x[i];
+            index=i;
+        }
+    }
+    alert(" so lon nhat la " + max + "vi tri la" + index);
+</script>
+</body>
+</html>

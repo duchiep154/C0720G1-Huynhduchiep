@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng</title>
+</head>
+<body>
+<script>
+    let a = new Array(5);
+    let count=0;
+    for (let i = 0; i < a.length; i++){
+        a[i]=prompt("nhap phan tu cua mang :");
+         if(isNaN(a[i]) == false){
+
+            count++;
+        }
+    }
+    alert("Tổng số ký tự là số: " + count);
+</script>
+
+</body>
+</html>

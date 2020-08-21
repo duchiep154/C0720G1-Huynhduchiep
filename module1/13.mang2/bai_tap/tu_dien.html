@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<body>
+<form>
+    <input type="text" id="txtSearch" />
+    <button type="button" onclick="timKiem()">Tra từ</button>
+    <p id="txtResult"></p>
+</form>
+<script>
+    let english = ['hello', 'chair', 'lamp', 'pen', 'book'];
+    let vietnamme = ['xin chao', 'ghế', 'đèn', 'bút', 'sách'];
+    function timKiem() {
+        let word = document.getElementById("txtSearch").value;
+        let result;
+        for (let i = 0; i < english.length; i++){
+            if (word == english[i]) {
+                result = vietnamme[i];
+                document.getElementById("txtResult").innerHTML = result;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

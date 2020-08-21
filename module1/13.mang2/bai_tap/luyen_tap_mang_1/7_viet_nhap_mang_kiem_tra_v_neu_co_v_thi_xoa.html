@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không</title>
+</head>
+<body>
+<script>
+
+    let array = new Array(5);
+    for (let i = 0; i < array.length; i++){
+        array[i] = prompt("Nhập a[" + i + "]: ");
+    }
+    let V = parseInt(prompt("Nhập số nguyên V:"));
+    for (let j = 0; j <= array.length; j++){
+        if (array[j] == V){
+            array[j] = array[j + 1];
+
+        }
+    }
+    alert(array);
+
+</script>
+
+</body>
+</html>

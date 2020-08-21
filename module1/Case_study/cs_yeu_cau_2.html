@@ -24,7 +24,7 @@
         + "2.chỉnh sửa thông tin khách hàng ." + "\n"
         + "3. Hiển thị giá khi được giảm giá " ));
     switch (chon) {
-        case 1 :{
+        case 1 :
             alert("Thông tin nhập vào:\n " +
                 "01. Tên khách hàng: " + name + "\n" +
                 "02. Số CMND: " + id + "\n" +
@@ -38,7 +38,21 @@
                 "10. Loại hình dịch vụ: " + serviceRoom + "\n" +
                 "11. Loại phòng khách cần: " + roomType + "\n" +
                 "12. Tổng số tiền phải thanh toán: " + "$" + total);
-        }
+            break;
+         case 2 :
+             let editInfo = prompt("\"01. Tên khách hàng: \" + name + \"\\n\" +\n" +
+                 "                \"02. Số CMND: \" + id + \"\\n\" +\n" +
+                 "                \"03. Ngày tháng năm sinh: \" + birthday + \"\\n\" +\n" +
+                 "                \"04. Địa chỉ Email: \" + email + \"\\n\" +\n" +
+                 "                \"05. Địa chỉ khác hàng: \" + address + \"\\n\" +\n" +
+                 "                \"06. Cấp độ khách hàng: \" + custumerType + \"\\n\" +\n" +
+                 "                \"07. Phần trăm giảm giá: \" + discount + \"\\n\"  +\n" +
+                 "                \"08. Số lượng khác hàng: \" + peopleInclude + \"\\n\" +\n" +
+                 "                \"09. Số ngày thuê: \" + rentDay + \"\\n\" +\n" +
+                 "                \"10. Loại hình dịch vụ: \" + serviceRoom + \"\\n\" +\n" +
+                 "                \"11. Loại phòng khách cần: \" + roomType + \"\\n\" +\n" +
+                 "                \"12. Tổng số tiền phải thanh toán: \" + \"$\" + total ");
+
 
     }
 
