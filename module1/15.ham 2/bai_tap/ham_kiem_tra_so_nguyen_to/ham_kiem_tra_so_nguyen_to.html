@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra so nguyen to </title>
+</head>
+<body>
+<script>
+   // let number =parseInt(prompt(" nhap so de chekc : "));
+  //  isPrime(number);
+
+
+
+   /* function isPrime(number) {
+
+
+        let flag = true;
+        if (number < 2){
+            flag = false;
+        }
+        else{
+
+            for (let i = 2; i < number-1; i++)
+            {
+                if (number % i == 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag == true){
+            document.write(number + " là số nguyên tố <br/>");
+        }
+        else{
+            document.write(number + " không phải là số nguyên tố <br/>");
+        }
+
+    } */
+
+    let number =parseInt(prompt(" nhap so de chekc : "));
+    alert(isPrime(number));
+
+    function isPrime(number) {
+        let flag = true;
+        if (number < 2){
+            return  false;
+        }
+        else{
+            for (let i = 2; i < number-1; i++)
+            {
+                if (number % i == 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag == true){
+            return ("so" + number + " la so nguyen to");
+        }
+        else{
+            return  ("so " + number + " khon phai la so nguyen to");
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

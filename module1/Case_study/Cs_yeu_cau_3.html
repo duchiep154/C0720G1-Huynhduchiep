@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+    let name;
+    let id;
+    let birthday;
+    let email;
+    let address;
+    let custumerType;
+    let discount;
+    let peopleInclude;
+    let rentDay;
+    let serviceRoom;
+    let roomType ;
+    let totalPay;
+    let check=false;
+
+    // task 1
+     let tempName ="";
+     name=prompt('1.nhập tên khách hàng');
+     name=name.trim().toLocaleLowerCase();
+     for(let i=0;i<name.length; i++) {
+         if (name.charAt(i)===" "&&name.charAt(i+1)===" ") {
+             continue;
+
+         }
+         if(i===0 || name.charAt(i-1)===" ") {
+             tempName+=name.charAt(i).toLocaleUpperCase();
+             continue;
+
+         }
+         tempName+=name.charAt(i);
+
+     }
+
+     name=tempName;
+
+     do{
+         id=prompt('2.nhập số chứng minh nhân dân');
+         if(!isNaN(id)) {
+             id=Number.parseFloat(id);
+         }
+         if(!Number.isInteger(id)) {
+             alert("CMND khong dung dinh dang");
+             continue;
+         }
+         if(id<100000000||id>999999999){
+             alert("CMND khong dung dinh dang");
+             continue;
+         }
+         check=true;
+
+     } while(!check)
+    check=false;
+
+     do {
+         birthday=prompt('3.nhập ngày tháng năm sinh');
+         if(birthday.charAt(2) ==="/"&&birthday.charAt(5)==="/") {
+             let month=birthday.substring(0,2);
+             let day=birthday.substring(3,5);
+             let year=birthday.substring(6,10);
+             if(!isNaN(day)&&!isNaN(month)&&!isNaN(year)) {
+                 day=Number.parseFloat(day);
+                 month=Number.parseFloat(month);
+                 year=Number.parseFloat(year);
+                 if(Number.isInteger(month)&&Number.isInteger(day)&&Number.isInteger(year)) {
+                     if(month<13&&day<32&&year>1950){
+                         check=true;
+                     }
+                 }
+
+             }
+         }
+         if(!check){
+             alert("ngay sinh ko dung dinh dang")
+         }
+
+     } while(!check)
+     check=false;
+
+
+
+     do{
+         let countAt=0;
+         let countDoc=0;
+         email=prompt('4.nhập email khách hàng');
+         for(let i=0 ; i<email.length; i++){
+             if(email.charAt(i)==="@") {
+                 countAt++;
+                 for(let j=i+1; j<email.length; j++){
+                     if(email.charAt(j)===".") {
+                         countDoc++;
+                     }
+                 }
+             }
+
+         }
+         if(countAt!=1 || countDoc<1){
+             alert("email ban nhap ko dung")
+         }else {
+             check=true;
+
+         }
+     } while (!check)
+    check=false;
+
+     address=prompt('5.nhập địa chỉ khách hàng');
+     custumerType=prompt('6.nhập loại khách hàng');
+     discount=prompt('7.nhập phần trăm giảm giá');
+     do {
+         peopleInclude=prompt('8.nhập số người đi kèm');
+         if(!isNaN(peopleInclude)) {
+             peopleInclude=Number.parseFloat(peopleInclude);
+             if(Number.isInteger(peopleInclude) && peopleInclude>0) {
+                 check=true;
+             }
+         }
+         if(!check) {
+             alert("so nguoi ko phai la so nguyen duong.");
+         }
+
+     } while (!check)
+    check=false;
+
+     do {
+         rentDay = prompt('9.nhâp số ngày ở lại');
+         if(!isNaN(rentDay)) {
+             rentDay=Number.parseFloat(rentDay);
+             if(Number.isInteger(rentDay) && rentDay>0) {
+                 check=true;
+             }
+         }
+         if(!check) {
+             alert("so ngay thue ko phai la so nguyen duong.");
+         }
+
+     } while(!check)
+    check=false;
+
+     serviceRoom=prompt('10.nhập loại dịch vụ phòng');
+     roomType = prompt('11.loại phòng khách sạn :');
+
+    alert("Tên khách hàng: " + name + "\n" +
+        "Số CMND: " + id + "\n" +
+        "Ngày tháng năm sinh: " + birthday + "\n" +
+        "Địa chỉ Email: " + email + "\n" +
+        "Địa chỉ khác hàng: " + address + "\n" +
+        "Cấp độ khách hàng: " + custumerType + "\n" +
+        "Phần trăm giảm giá: " + discount + "\n" +
+        "Số lượng khác hàng: " + peopleInclude + "\n" +
+        "Số ngày thuê: " + rentDay + "\n" +
+        "Loại hình dịch vụ: " + serviceRoom + "\n" +
+        "Loại phòng khách cần: " + roomType + "\n");
+
+</script>
+
+</body>
+</html>

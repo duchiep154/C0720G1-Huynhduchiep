@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name="huynhduchiep" ;
+    let id="201570268";
+    let birthday=" 07/21/ 1983";
+    let email="duchiep154@gmail.com ";
+    let address="DaNang";
+    let custumerType="Diamond";
+    let discount=10;
+    let peopleInclude="1";
+    let rentDay=1;
+    let serviceRoom="vip";
+    let roomType="Villa";
+
+    let check=false;
+    let totalPay;
+
+    let chon =parseInt(prompt("1.hiển thị thông tin Khách hàng:" + "\n"+
+        "2.chỉnh sửa thông tin khách hàng ." + "\n"+
+        "3. Hiển thị giá khi được giảm giá "));
+
+    switch (chon) {
+        case 1 : {
+            alert("Tên khách hàng: " + name + "\n" +
+                "Số CMND: " + id + "\n" +
+                "Ngày tháng năm sinh: " + birthday + "\n" +
+                "Địa chỉ Email: " + email + "\n" +
+                "Địa chỉ khác hàng: " + address + "\n" +
+                "Cấp độ khách hàng: " + custumerType + "\n" +
+                "Phần trăm giảm giá: " + discount + "\n" +
+                "Số lượng khác hàng: " + peopleInclude + "\n" +
+                "Số ngày thuê: " + rentDay + "\n" +
+                "Loại hình dịch vụ: " + serviceRoom + "\n" +
+                "Loại phòng khách cần: " + roomType + "\n");
+            break;
+        }
+        case 2 :{
+            let chon=parseInt(prompt("1.ten: " + name + "\n"+
+                "2.Số CMND: " + id + "\n" +
+                "3.Ngày tháng năm sinh: " + birthday + "\n" +
+                "4.Địa chỉ Email: " + email + "\n" +
+                "5.Địa chỉ khác hàng: " + address + "\n" +
+                "6.Cấp độ khách hàng: " + custumerType + "\n" +
+                "7.Phần trăm giảm giá: " + discount + "\n" +
+                "8.Số lượng khác hàng: " + peopleInclude + "\n" +
+                "9.Số ngày thuê: " + rentDay + "\n" +
+                "10.Loại hình dịch vụ: " + serviceRoom + "\n" +
+                "11.Loại phòng khách cần: " + roomType + "\n"));
+            switch (chon) {
+                case 1 :{
+                    let tempName ="";
+                    name=prompt('1.nhập tên khách hàng');
+                    name=name.trim().toLocaleLowerCase();
+                    for(let i=0;i<name.length; i++) {
+                        if (name.charAt(i)===" "&&name.charAt(i+1)===" ") {
+                            continue;
+
+                        }
+                        if(i===0 || name.charAt(i-1)===" ") {
+                            tempName+=name.charAt(i).toLocaleUpperCase();
+                            continue;
+
+                        }
+                        tempName+=name.charAt(i);
+
+                    }
+
+                    name=tempName;
+                    break;
+                }
+                case 2 :{
+                    do{
+                        id=prompt('2.nhập số chứng minh nhân dân');
+                        if(!isNaN(id)) {
+                            id=Number.parseFloat(id);
+                        }
+                        if(!Number.isInteger(id)) {
+                            alert("CMND khong dung dinh dang");
+                            continue;
+                        }
+                        if(id<100000000||id>999999999){
+                            alert("CMND khong dung dinh dang");
+                            continue;
+                        }
+                        check=true;
+
+                    } while(!check)
+
+                    break;
+                }
+                check=false;
+
+
+                case 3 :{
+                    do {
+                        birthday=prompt('3.nhập ngày tháng năm sinh');
+                        if(birthday.charAt(2) ==="/"&&birthday.charAt(5)==="/") {
+                            let month=birthday.substring(0,2);
+                            let day=birthday.substring(3,5);
+                            let year=birthday.substring(6,10);
+                            if(!isNaN(month)&&!isNaN(day)&&!isNaN(year)) {
+                                day=Number.parseFloat(day);
+                                month=Number.parseFloat(month);
+                                year=Number.parseFloat(year);
+                                if(Number.isInteger(month)&&Number.isInteger(day)&&Number.isInteger(year)) {
+                                    if(month<13&&day<32&&year>1950){
+                                        check=true;
+                                    }
+                                }
+
+                            }
+                        }
+                        if(!check){
+                            alert("ngay sinh ko dung dinh dang")
+                        }
+
+                    } while(!check)
+                    break;
+                }
+                check=false;
+
+
+                case 4 :{
+                    do{
+                        let countAt=0;
+                        let countDoc=0;
+                        email=prompt('4.nhập email khách hàng');
+                        for(let i=0 ; i<email.length; i++){
+                            if(email.charAt(i)==="@") {
+                                countAt++;
+                                for(let j=i+1; j<email.length; j++){
+                                    if(email.charAt(j)===".") {
+                                        countDoc++;
+                                    }
+                                }
+                            }
+
+                        }
+                        if(countAt!=1 || countDoc<1){
+                            alert("email ban nhap ko dung")
+                        }else {
+                            check=true;
+
+                        }
+                    } while (!check)
+
+                    break;
+                }
+
+                case 5 :{
+                    address=prompt("enter dia chi : ");
+                    break;
+                }
+                case 6 :{
+                    custumerType=prompt("enter loai khach hang: ");
+                    break;
+                }
+                case 7 :{
+                    discount=prompt("enter gia giam: ");
+                    break;
+                }
+                case 8 :{
+                    do {
+                        peopleInclude=prompt('8.nhập số người đi kèm');
+                        if(!isNaN(peopleInclude)) {
+                            peopleInclude=Number.parseFloat(peopleInclude);
+                            if(Number.isInteger(peopleInclude) && peopleInclude>0) {
+                                check=true;
+                            }
+                        }
+                        if(!check) {
+                            alert("so nguoi ko phai la so nguyen duong.");
+                        }
+
+                    } while (!check)
+                    break;
+                }
+                check=false;
+                case 9 :{
+                    do {
+                        rentDay = prompt('9.nhâp số ngày ở lại');
+                        if(!isNaN(rentDay)) {
+                            rentDay=Number.parseFloat(rentDay);
+                            if(Number.isInteger(rentDay) && rentDay>0) {
+                                check=true;
+                            }
+                        }
+                        if(!check) {
+                            alert("so ngay thue ko phai la so nguyen duong.");
+                        }
+
+                    } while(!check)
+                    break;
+                }
+                check=false;
+                case 10 :{
+                    serviceRoom=prompt("enter loai dich vu phong: ");
+                    break;
+                }
+                case 11 :{
+                    roomType=prompt("enter loai phong: ");
+                    break;
+                }
+
+                default:{
+                    alert("faile");
+                }
+
+            }
+
+        }
+        case 3 : {
+
+
+            let money =0;
+            if (roomType === "Villa") {
+                money =500;
+            }else if (roomType === "House"){
+                money =300;
+            }else if (roomType === "Room") {
+                money =100;
+            }
+            let pay = (money*rentDay*(1-discount/100));
+
+            let currentYear = new Date().getFullYear();
+            let yearCustomer = new Date(birthday).getFullYear();
+            let ageCustomer = currentYear - yearCustomer;
+
+
+            let giamAdrress = 0;
+            if (address === "DaNang") {
+
+                if (ageCustomer >= 30) {
+                    giamAdrress += 22;
+                }else if (ageCustomer <30) {
+                    giamAdrress += 21;
+                }else {
+                    giamAdrress +=20;
+                }
+            }else if (address === "Hue"){
+                giamAdrress += 10;
+            }else if (address === "quang ngai"){
+                giamAdrress += 5;
+            }
+
+
+            let giamDay=0;
+            if (rentDay > 7){
+                giamDay += 30;
+            }else if(rentDay>5 && rentDay<7){
+                giamDay += 20;
+            }else if (rentDay>2 && rentDay<4){
+                giamDay += 10;
+            }
+
+
+            let giamCustumer = 0;
+            if (custumerType === "Diamond"){
+                giamCustumer += 15;
+            }else if (custumerType === "Platium"){
+                giamCustumer += 10;
+            }else if (custumerType === "Gold"){
+                giamCustumer += 5;
+            }else if (custumerType === "Silver"){
+                giamCustumer += 2;
+            }else if (custumerType === "Member"){
+                giamCustumer += 0;
+            }
+
+            totalPay=(pay - giamAdrress - giamCustumer - giamDay);
+
+            alert("Tên khách hàng: " + name + "\n" +
+                "Số CMND: " + id + "\n" +
+                "Ngày tháng năm sinh: " + birthday + "\n" +
+                "Địa chỉ Email: " + email + "\n" +
+                "Địa chỉ khác hàng: " + address + "\n" +
+                "Cấp độ khách hàng: " + custumerType + "\n" +
+                "Phần trăm giảm giá: " + discount + "\n" +
+                "Số lượng khác hàng: " + peopleInclude + "\n" +
+                "Số ngày thuê: " + rentDay + "\n" +
+                "Loại hình dịch vụ: " + serviceRoom + "\n" +
+                "Loại phòng khách cần: " + roomType + "\n" +
+                "tong so tien la : "+ totalPay + "$ ");
+            break;
+        }
+
+
+
+
+
+
+    }
+</script>
+
+</body>
+</html>

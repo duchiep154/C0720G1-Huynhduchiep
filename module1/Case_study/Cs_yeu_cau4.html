@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNameCustomer = [];
+    while (true) {
+        let choose = parseInt(prompt("1.add new Customers" + "\n" + "2.delete Customer"));
+        switch (choose) {
+            case 1 : {
+                let number = parseInt(prompt("enter number customer you want to add to arr: "));
+                for (let i = 0; i < number; i++) {
+                    let nameCustomer = prompt("enter name of customer : ");
+                    arrNameCustomer.push(nameCustomer);
+                }
+                let result = "";
+                for (let i = 0; i < arrNameCustomer.length; i++) {
+                    result += (i + 1) + "." + arrNameCustomer[i] + "\n";
+                }
+                alert(result);
+            }
+                break;
+            default: {
+                alert("failed");
+            }
+
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen m sang ft va nguoc lai</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>meters</label>
+        <input id="inputMeter" type="number" placeholder="meter"
+               oninput="mConverter(this.value)"
+               onchange="mConverter(this.value)">
+    </p>
+    <p>feet: <span id="outputFeet"></span></p>
+    <p>
+        <label>Feet</label>
+        <input id="inputFeet" type="number" placeholder="feet"
+               oninput="fConverter(this.value)"
+               onchange="fConverter(this.value)">
+    </p>
+    <p>Meter: <span id="outputMeter"></span></p>
+</form>
+<script>
+    function mConverter(meter) {
+        meter = parseFloat(meter);
+        document.getElementById("outputFeet").innerHTML = 3.279 * meter;
+    }
+    function fConverter(feet) {
+        feet = parseFloat(feet);
+        document.getElementById("outputMeter").innerHTML = 0.305 * feet;
+    }
+</script>
+
+</body>
+</html>
