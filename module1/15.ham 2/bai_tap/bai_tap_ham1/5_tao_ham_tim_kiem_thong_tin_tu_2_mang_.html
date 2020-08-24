@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao ham tim kiem thong tin tu 2 mang cho truoc tra ve gia tri cua no </title>
+</head>
+<body>
+
+<script>
+
+    let saoName = [ "Polaris" , "Aldebaran" , "Deneb" , "Vega" , "Altair" , "Dubhe" , "Regulus" ];
+    let chomSao = [ "Ursa Minor" , "Tarurus" , "Cygnus" , "Lyra" , "Aquila" , "Ursa Major" , "Leo" ];
+    let saoCanTim =prompt("nhập sao cần tìm")
+
+   timChomSao();
+    function timChomSao() {
+        let check = true;
+        for (let i = 0 ; i < saoName.length ; i++) {
+            if ( saoCanTim == saoName[i] ) {
+                check = false;
+
+                alert( "Ngôi sao " + saoName[i] + " thuộc chòm sao " + chomSao[i]);
+            }
+        }
+        if ( check ) {
+
+            alert( "Không tìm thấy ngôi sao này ");
+        }
+    }
+
+</script>
+
+</body>
+</html>

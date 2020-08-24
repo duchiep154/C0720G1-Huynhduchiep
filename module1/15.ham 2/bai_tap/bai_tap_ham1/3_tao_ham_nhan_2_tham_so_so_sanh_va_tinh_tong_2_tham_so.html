@@ -6,7 +6,22 @@
 </head>
 <body>
 <script>
-    let a = 
+    let a = parseInt(prompt("nhap so thu nhat"));
+    let b = parseInt(prompt("nhap so thu 2"));
+    document.write(soSanhTinhTong(a,b));
+
+
+
+
+    function soSanhTinhTong(a,b) {
+        if (a > b) {
+            return "so thu nhat lon hon so thu 2";
+        } else {
+            return a+b
+        }
+
+
+    }
 </script>
 
 </body>
