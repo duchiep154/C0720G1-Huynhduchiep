@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ki tu nhap vao</title>
+</head>
+<body>
+<script>
+    let num =prompt("nhap ki tu de kiem tra");
+    alert(kiemTra());
+
+
+
+    function kiemTra() {
+        if (isNaN(num)) {
+            ketQua = false
+        }else ketQua=true;
+
+        return "la ky tu so : " + " " + ketQua ;
+
+    }
+</script>
+</body>
+</html>

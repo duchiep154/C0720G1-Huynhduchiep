@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("nhap so de kiem tra"));
+    alert(kiemTraNguyenDuong());
+
+
+    function kiemTraNguyenDuong() {
+        if (num >= 0){
+            return num + " la so nguyen duong";
+
+        }else {
+            return num + " ko phai so nguyen duong"
+        }
+
+    }
+</script>
+
+</body>
+</html>
