@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<script>
+    class Rectangle {
+        constructor(dai,rong,) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+        getDai(){
+            return this.dai;
+        }
+        getRong(){
+            return this.rong;
+        }
+        getDienTich(){
+            return dai * rong;
+        }
+        getChuVi(){
+            return 2 * ( dai + rong);
+        }
+        setDai(dai){
+            this.dai = dai;
+        }
+        setRong(rong){
+            this.rong= rong;
+        }
+    }
+
+    let chieuDai=parseInt(prompt("nhap chieu dai"));
+    let chieuRong=parseInt(prompt("nhap chieu rong"));
+
+    let rectangle = new Rectangle(chieuDai,chieuRong);
+    let dai = rectangle.getDai();
+    let rong = rectangle.getRong();
+    let chuVy=rectangle.getChuVi();
+    let dienTich = rectangle.getDienTich();
+
+    alert("chieu dai : " + dai +  "chieu rong : " + rong +  " dien tich :" + dienTich + "chuvy :"+ chuVy);
+
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = "red";
+    ctx.fillRect(0,0,chieuDai,chieuRong);
+
+
+</script>
+
+</body>
+</html>

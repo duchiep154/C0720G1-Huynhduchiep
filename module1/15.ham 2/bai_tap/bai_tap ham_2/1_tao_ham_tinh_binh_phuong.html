@@ -7,11 +7,14 @@
 <body>
 <script>
     let a = parseFloat(prompt("nhập số cần tìm "));
-    alert(timSoBinhPhuong());
+    let b = parseInt(prompt("nhap so can tim"));
 
+    let c =timSoBinhPhuong(a) +timSoBinhPhuong(b);
 
-    function timSoBinhPhuong() {
-        return "số bình phương của" + a + "là" + a*a;
+    alert(c);
+
+    function timSoBinhPhuong(so) {
+        return  so*so;
 
     }
 </script>

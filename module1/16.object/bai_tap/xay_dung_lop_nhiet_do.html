@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(tempC) {
+            this.tempC = tempC ;
+        }
+        getTempC(){
+            return this.tempC ;
+        }
+        getTempF(){
+            return  9/5 * tempC + 32 ;
+        }
+        getTempK(){
+            return tempC + 273.15 ;
+        }
+        setTempC(tempC){
+            this.tempC = tempC;
+        }
+    }
+
+
+    let temperature = new Temperature(50);
+    let tempC= temperature.getTempC();
+    let tempF= temperature.getTempF();
+    let tempK= temperature.getTempK();
+
+    alert(" nhiet do C la : " + tempC + " ; nhiet do F la : " + tempF + " ; nhiet do Kelvin la : " + tempK );
+
+    temperature.setTempC(60);
+    tempC=temperature.getTempC();
+    tempF=temperature.getTempF();
+    tempK=temperature.getTempK();
+    alert(" nhiet do C la : " + tempC + " ; nhiet do F la : " + tempF + " ; nhiet do Kelvin la : " + tempK );
+
+
+
+</script>
+
+</body>
+</html>

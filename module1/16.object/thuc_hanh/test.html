@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    // chỉ vẽ hình cn có đường viền dùng  1 lệnh dưới
+    // ctx.strokeRect(10,10,150,80); (tọa độ x, tọa độ y, chiều rộng, chiều cao)
+    // vẽ hình cn có tô màu dùng  2 lệnh dưới
+    ctx.fillStyle = "red"; /// đỏ màu cho lên
+    ctx.fillRect(100,10,100,80);// (tọa độ x, tọa độ y, chiều rộng, chiều cao)
+</script>
+</body>
+</html>

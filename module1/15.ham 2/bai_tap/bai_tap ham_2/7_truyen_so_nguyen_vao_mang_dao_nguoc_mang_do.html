@@ -6,16 +6,12 @@
 </head>
 <body>
 <script>
-    let n =parseInt(prompt("nhap do dai mang"));
-    let array = new Array(n);
-    alert(daoNguocMang());
-
-    function daoNguocMang() {
-        alert(" mang nhap vao la :" + a + "\n "mang sau khi doi " + a.reverse());
-            return a.reverse();
-
+    let array = [0,1,2,3,4,5];
+    alert(daoNguocMang(array));
+    function daoNguocMang(a) {
+        a.reverse();
+        return a;
     }
 </script>
-
 </body>
 </html>

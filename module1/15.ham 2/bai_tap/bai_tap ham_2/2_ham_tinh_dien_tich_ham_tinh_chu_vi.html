@@ -6,14 +6,21 @@
 </head>
 <body>
 <script>
-    let r =parseFloat(prompt("nhập  đường kinh hình tròn"));
-    alert(chuViDienTich());
+    let banKinh =parseFloat(prompt("nhập  đường kinh hình tròn"));
+    alert(chuVi(banKinh));
+    alert(dienTich(banKinh));
 
 
-    function chuViDienTich(){
-        let dienTich = (r* r) * 3.14;
-        let chuVy = ( 2 * r) * 3.14;
-        return "diện tich hình tròn la : " + dienTich + "chu vi hinh tron là :" + chuVy;
+    function chuVi(r){
+
+        let chuVy = ( 2 * r) * Math.PI;
+        return   chuVy;
+    }
+
+    function dienTich(r) {
+        let dienTich = (r* r) * Math.PI;
+        return dienTich;
+
     }
 </script>
 

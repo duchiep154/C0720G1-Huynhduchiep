@@ -6,16 +6,20 @@
 </head>
 <body>
 <script>
-    let num = parseInt(prompt("nhap so de kiem tra"));
-    alert(kiemTraNguyenDuong());
+    let number = parseInt(prompt("nhap so de kiem tra"));
+    if (kiemTraNguyenDuong(number) === true) {
+        alert("la so nguyen duong");
+    }else {
+        alert(" la so nguyen am");
+    }
 
 
-    function kiemTraNguyenDuong() {
+    function kiemTraNguyenDuong(num) {
         if (num >= 0){
-            return num + " la so nguyen duong";
+            return true;
 
         }else {
-            return num + " ko phai so nguyen duong"
+            return false;
         }
 
     }

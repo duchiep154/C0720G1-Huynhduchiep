@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhap so phan tu cua mang");
+    let array1 = new Array(num);
+    for (let i=0;i<num ; i++){
+        array1[i]=prompt("nhap phan tu  vao ");
+    }
+    let kyTu = prompt("nhap ky tu can tim");
+    if (timKyTuTrongMang(array1,kyTu) > 0){
+        alert("so lan xuat hien cua ky tu " + timKyTuTrongMang(array1,kyTu));
+    }else {
+        alert("ko co xuat hien");
+    }
+
+
+
+    function timKyTuTrongMang(array,char) {
+        let count = 0 ;
+        for (let i = 0; i < array.length; i++) {
+            if (char ===array[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count ;
+        }else {
+            return -1;
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

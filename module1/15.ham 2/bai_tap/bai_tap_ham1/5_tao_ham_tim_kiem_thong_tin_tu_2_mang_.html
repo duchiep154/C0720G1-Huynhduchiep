@@ -10,10 +10,14 @@
 
     let saoName = [ "Polaris" , "Aldebaran" , "Deneb" , "Vega" , "Altair" , "Dubhe" , "Regulus" ];
     let chomSao = [ "Ursa Minor" , "Tarurus" , "Cygnus" , "Lyra" , "Aquila" , "Ursa Major" , "Leo" ];
-    let saoCanTim =prompt("nhập sao cần tìm")
+    let ngoiSao1 =prompt("nhập sao cần tìm");
+    let ngoiSao2 =prompt("nhap sao can tim");
 
-   timChomSao();
-    function timChomSao() {
+    timChomSao(ngoiSao1);
+    timChomSao(ngoiSao2);
+
+
+    function timChomSao(saoCanTim) {
         let check = true;
         for (let i = 0 ; i < saoName.length ; i++) {
             if ( saoCanTim == saoName[i] ) {

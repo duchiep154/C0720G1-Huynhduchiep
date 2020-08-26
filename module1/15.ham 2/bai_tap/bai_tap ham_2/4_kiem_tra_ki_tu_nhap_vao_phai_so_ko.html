@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let num =prompt("nhap ki tu de kiem tra");
-    alert(kiemTra());
+    let chuoi =prompt("nhap ki tu de kiem tra");
+    alert(kiemTra(chuoi));
 
 
 
-    function kiemTra() {
+    function kiemTra(num) {
         if (isNaN(num)) {
             ketQua = false
         }else ketQua=true;
 
-        return "la ky tu so : " + " " + ketQua ;
+        return  ketQua ;
 
     }
 </script>

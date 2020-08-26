@@ -6,26 +6,28 @@
 </head>
 <body>
 <script>
-    let num1 = parseFloat(prompt("nhập số thứ nhât"));
-    let num2 = parseFloat(prompt("nhập số thứ 2"));
-    let num3 = parseFloat(prompt("nhập só thứ 3"));
+    let number1 = parseFloat(prompt("nhập số thứ nhât"));
+    let number2 = parseFloat(prompt("nhập số thứ 2"));
+    let number3 = parseFloat(prompt("nhập só thứ 3"));
 
-    alert(timSoNhoNhat());
+    alert(timSoNhoNhat(number1,number2,number3));
 
 
 
-    function timSoNhoNhat() {
+    function timSoNhoNhat(num1,num2,num3) {
+        let min=0;
         if (num1 < num2 ){
             if (num1 < num3) {
-                return (num1 + "la so nho nhat");
+               min = num1;
             } else {
-                return (num3 + " la so nho nhat");
+                min = num3;
             }
         } else if (num2 < num3 ){
-             return (num2 + "la so nho nhat");
+            min = num2;
         } else {
-             return (num3 + " la so be nhat");
+             min = num3;
         }
+        return min;
     }
 
 
