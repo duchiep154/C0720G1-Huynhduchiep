@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tạo menu gồm có tính năng Add New Customer và Delete Customer</title>
 </head>
 <body>
 <script>
-    let arrNameCustomer = [];
+  //task 1 + task 2
+
+    let arrNameCustomer = ["huỳnh đức hiệp ","trương tấn trung","nguyễn thành luyện","huỳnh đức phát","nguyễn thị bé út","lâm thị lệ thu","huỳnh đức thành","hoàng thị minh thanh","huỳnh đức bảo","huỳnh minh dung"];
+        arrNameCustomer.sort();
     while (true) {
         let choose = parseInt(prompt("1.add new Customers" + "\n" + "2.delete Customer"));
         switch (choose) {
@@ -15,6 +18,7 @@
                 for (let i = 0; i < number; i++) {
                     let nameCustomer = prompt("enter name of customer : ");
                     arrNameCustomer.push(nameCustomer);
+
                 }
                 let result = "";
                 for (let i = 0; i < arrNameCustomer.length; i++) {
@@ -23,12 +27,40 @@
                 alert(result);
             }
                 break;
+            case 2 :{
+
+                let result = "";
+                for (let i = 0; i < arrNameCustomer.length; i++) {
+                   result +=   (i + 1) + "." + arrNameCustomer[i] + "\n";
+                }
+                alert("danh sách customer " +"\n" + result);
+
+                let b=parseInt(prompt("nhập số của  vị trí  custumer bạn muốn xóa"));
+                let c=b-1;
+                const removed = arrNameCustomer.splice(c, 1);
+
+                let result2="";
+                for (let i = 0; i < arrNameCustomer.length; i++) {
+
+
+                    result2 += (i + 1) + "." + arrNameCustomer[i] + "\n";
+                }
+                alert(result2);
+                break;
+
+
+              //  const valueToRemove =prompt("nhập tên customer muốn xóa");
+              // const new_arrNameCustomer = arrNameCustomer.filter(item => item !== valueToRemove)
+              //  alert(new_arrNameCustomer);
+            }
             default: {
                 alert("failed");
             }
 
         }
     }
+
+
 
 
 </script>
