@@ -7,32 +7,41 @@
 <body>
 <script>
     class Temperature {
-        constructor(tempC) {
-            this.tempC = tempC ;
+        constructor(temp) {
+            this.tempC = temp ;
         }
         getTempC(){
             return this.tempC ;
         }
         getTempF(){
-            return  9/5 * tempC + 32 ;
+            return  (9/5 * this.tempC) + 32 ;
         }
         getTempK(){
-            return tempC + 273.15 ;
+            return this.tempC + 273.15 ;
         }
-        setTempC(tempC){
-            this.tempC = tempC;
+        setTempC(temp){
+            this.tempC = temp;
         }
     }
 
+    let temp1=parseFloat(prompt("nhap nhiet do "));
 
-    let temperature = new Temperature(50);
-    let tempC= temperature.getTempC();
-    let tempF= temperature.getTempF();
-    let tempK= temperature.getTempK();
+    let temperature = new Temperature(temp1);
+    let tempC1= temperature.getTempC();
+    let tempF1= temperature.getTempF();
+    let tempK1= temperature.getTempK();
 
-    alert(" nhiet do C la : " + tempC + " ; nhiet do F la : " + tempF + " ; nhiet do Kelvin la : " + tempK );
+    alert(" nhiet do C la : " + tempC1 + " ; nhiet do F la : " + tempF1 + " ; nhiet do Kelvin la : " + tempK1 );
+    let temp2=parseFloat(prompt("nhap nhiet do 2"));
+    let temperature2 = new Temperature(temp2);
+    let tempC3=temperature2.getTempC();
+    let tempF3=temperature2.getTempF();
+    let tempK3=temperature2.getTempK();
+    alert(" nhiet do C la : " + tempC3 + " ; nhiet do F la : " + tempF3 + " ; nhiet do Kelvin la : " + tempK3 );
 
-    temperature.setTempC(60);
+
+   let temp3=parseInt(prompt("nhap nhiet do muon dieu chinh"));
+    temperature.setTempC(temp3);
     tempC=temperature.getTempC();
     tempF=temperature.getTempF();
     tempK=temperature.getTempK();
