@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập số lượng của mảng:"));
+    let array = new Array(number);
+
+    for ( let i = 0; i < array.length; i++) {
+        array [i] = prompt("Nhập phần tử thứ " + i );
+    }
+    document.write("Mảng cũ:" + array.join(" ") + "<br>");
+
+    for (let i = 0; i < array.length ; i++) {
+        if (array[i] === "-") {
+            array[i] = "_"
+        }
+    }
+    document.write("Mảng Mới: " + array.join(" "));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình quản  lý danh  sách các  sinh viên  của một lớp</title>
+</head>
+<body>
+<script>
+    class Student{
+        constructor(maSV,ten,ngaySinh,gioiTinh,lop,khoa) {
+            this.maSV=maSV;
+            this.ten=ten;
+            this.ngaySinh=ngaySinh;
+            this.gioiTinh=gioiTinh;
+            this.lop=lop;
+            this.khoa=khoa;
+        }
+        setMaSV(maSV){
+            this.maSV=maSV;
+        }
+        getMaSV(){
+            return this.maSV;
+        }
+        setTen(ten){
+            this.ten=ten;
+        }
+        getTen(){
+            return this.ten;
+        }
+        setNgaySinh(ngaySinh){
+            this.ngaySinh=ngaySinh;
+        }
+        getNgaySinh(){
+            return this.ngaySinh;
+        }
+        setGioiTinh(gioTinh){
+            this.gioiTinh=gioTinh;
+        }
+        getGioiTinh(){
+            return this.gioiTinh;
+        }
+        setLop(lop){
+            this.lop=lop;
+        }
+        getLop(){
+            return this.lop;
+        }
+        setKhoa(khoa){
+            this.khoa= khoa;
+        }
+        getKhoa(){
+            return this.khoa;
+        }
+        getInfo(){
+            let string=" Mã SV: "+this.maSV+ " -Tên: "+this.ten+" -Ngày Sinh: "+this.ngaySinh+
+                " -Giới Tính: "+ this.gioiTinh+ " -Lớp: "+ this.lop+ "- Khoa: "+ this. khoa;
+            return string;
+        }
+    }
+    let arrListStudent=[];
+    let sv1= new Student("a001","huynh duc hiep","15/05/1990","nam","C001","db2020");
+    let sv2= new Student("a002","nguyen van A","17/06/1990","nam","C001","db2020");
+    let sv3= new Student("a003","Le van B","09/07/1990","nam","C001","db2020");
+    let sv4= new Student("a004","le thi C","23/08/1990","nu","C001","db2020");
+    let sv5= new Student("a005","tran văn D","18/09/1990","nam","C001","db2020");
+    arrListStudent.push(sv1);
+    arrListStudent.push(sv2);
+    arrListStudent.push(sv3);
+    arrListStudent.push(sv4);
+    arrListStudent.push(sv5);
+    function displayMainmenu() {
+        let choose = parseInt(prompt("1.Add new student"+ "\n 2.remove" +"\n 3.Search"+"\n 4.print"));
+        switch (choose) {
+            case 1 : {
+                addStudent();
+                break;
+            }
+            case 2 : {
+                removeStudent();
+                break;
+            }
+            case 3 : {
+                search();
+                break;
+            }
+            case 4 : {
+                print();
+                break;
+            }
+            default : {
+                alert("false");
+            }
+        }
+    }
+    function addStudent(){
+        let maSoSV=parseInt(prompt("nhập mã số sinh viên :"));
+        let name=prompt("nhập tên sinh viên :");
+        let birthday=prompt("nhập ngày sinh:");
+        let gender=prompt("nhập giới tính :");
+        let className=prompt("nhập tên lớp :");
+        let khoaName=prompt("nhập tên khóa :");
+        let sinhVien= new Student(maSoSV, name,birthday,gender,className,khoaName);
+        arrListStudent.push(sinhVien);
+        print();
+    }
+    // function removeStudent() {
+    //     let  chooseDelete = parseInt(prompt(" 1.xóa theo ma so sinh vien"+"\n 2.xóa theo danh sách"));
+    //     switch (chooseDelete) {
+    //         case 1 : {
+    //             let a = prompt("nhập mã số sinh viên muốn xóa");
+    //             for (let i=0; i<arrListStudent.length; i++){
+    //                 for (let j=0;j<arrListStudent.length;j++){
+    //                     if (a === arrListStudent[i][j]){
+    //                         arrListStudent.splice(i,1);
+    //                         break;
+    //                     }
+    //                     else {
+    //                         alert("khong tim thay");
+    //                         break;
+    //                     }
+    //                 }
+    //             }
+    //             break;
+    //         }
+    //         case 2 : {
+    //             let temp = "";
+    //             for (let i = 0; i < arrListStudent.length; i++) {
+    //                 temp += i + 1 + ".mã số " + arrListStudent[i][0] + "ten:" + arrListStudent[i][1] + "\n";
+    //             }
+    //             let chooseDelete2 = parseInt(prompt(temp));
+    //             let check = parseInt(prompt("bạn có muốn xóa ko ?" + "\n1.Yes 2.No"));
+    //             if (check === 1) {
+    //                 arrListStudent.splice(chooseDelete2, 1);
+    //                 alert("bạn đã xóa thành công");
+    //                 displayMainMenu();
+    //             } else {
+    //                 alert("cancel");
+    //                 displayMainMenu();
+    //             }
+    //         }
+    //         default :
+    //             alert("huy");
+    //             displayMainmenu();
+    //     }
+    // }
+    function print() {
+        let danhSachThongTinSinhVien="";
+        for (let i = 0; i < arrListStudent.length; i++) {
+            danhSachThongTinSinhVien += "\n"+(i+1)+ ".Sinh Viên: "+ arrListStudent[i].getInfo();
+        }
+        alert(danhSachThongTinSinhVien);
+        displayMainmenu();
+    }
+    // function search() {
+    //     let searchSV = prompt("nhap thong tin can tim");
+    //     for (let i=0 ; i<arrListStudent.length;i++){
+    //         for (let j=0 ;j<arrListStudent.length;j++){
+    //             if(searchSV === arrListStudent[i][j]){
+    //                 alert(arrListStudent[i]);
+    //                 break;
+    //             }
+    //             else {
+    //                 alert("khong tim thay ");
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
+    displayMainmenu();
+</script>
+
+</body>
+</html>

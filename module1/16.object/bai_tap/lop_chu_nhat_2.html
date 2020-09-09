@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+<br>
+<label for="width">Please input the width and height of the rectangle</label><br>
+<input type="number" id="width" placeholder="<400" onfocus="this.value=''">,
+<label for="height"></label><input type="number" id="height" placeholder="<400" onfocus="this.value=''"><br>
+<button type="button"
+        onclick="myRectangle.setHeight(); myRectangle.setWidth(); myRectangle.perimeter();myRectangle.area() ;myRectangle.drawRetangle() "
+>Draw</button>
+<br>
+<span>Perimeter = </span><span id="perimeter"></span><br>
+<span>Area = </span><span id="area"></span><br>
+<script>
+    class   rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth () {
+            return this.width;
+        }
+        getHeight () {
+            return this.height;
+        }
+        setWidth () {
+            this.width = document.getElementById("width").value;
+        }
+        setHeight () {
+            this.height = document.getElementById("height").value;
+        }
+        perimeter() {
+            this.getHeight();
+            this.getWidth();
+            return document.getElementById("perimeter").innerHTML = 2*(this.height + this.width);
+        }
+        area() {
+            this.getHeight();
+            this.getWidth();
+            return document.getElementById("area").innerHTML = (this.width*this.height);
+        }
+        drawRetangle() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.clearRect(0, 0, c.width, c.height);
+            ctx.fillStyle = "#FF0000"
+            ctx.strokeRect(10, 10, myRectangle.width, myRectangle.height);
+        }
+    }
+    let myRectangle = new rectangle(0,0);
+</script>
+</body>
+</html>

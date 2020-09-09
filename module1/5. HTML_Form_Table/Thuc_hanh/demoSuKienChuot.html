@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo sự kiện chuột</title>
+</head>
+<body>
+
+<label> Sự kiện onchange</label>
+<input type="text" id="input1" onchange="display1()">
+<p id="displayOnChange">hiện thị onchange</p>
+
+<label> sự kiện oninput</label>
+<input type="text" id="input2" oninput="display2()">
+<p id="displayOninput"> hiện thị oninput</p>
+
+<input type="button" value="Sự kiện onclick" onclick="display3()">
+<p id="displayOnClick">hiện thị onClick</p>
+
+<input type="button" value="Sự kiện onmouseover" onmouseover="display4()">
+<p id="displayOnmouser"> hiện thị onmouseover</p>
+
+<script>
+    function display1() {
+        let a1= document.getElementById("input1").value;
+        document.getElementById("displayOnChange").innerText=a1;
+    }
+
+    function display2() {
+        let a2= document.getElementById("input2").value;
+        document.getElementById("displayOninput").innerText=a2;
+    }
+
+    function display3() {
+        let a1= document.getElementById("input1").value;
+        let a2= document.getElementById("input2").value;
+        document.getElementById("displayOnClick").innerText=a2+a1;
+    }
+
+    function display4() {
+        let a1= document.getElementById("input1").value;
+        let a2= document.getElementById("input2").value;
+        document.getElementById("displayOnmouser").innerText=a2+a1;
+    }
+</script>
+</body>
+</html>

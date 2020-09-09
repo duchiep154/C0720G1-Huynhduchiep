@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let numberCheck = parseInt(prompt("Nhập số cần kiểm tra: "));
+    alert (isFibonacci(numberCheck));
+
+    function isFibonacci(value){
+        if ( value === 0 || value === 1){
+            return true;
+        } else {
+            let fiBo1 = 1;
+            let fiBo2 = 1;
+            let fiBoN = 0;
+            while (fiBo1 <= value) {
+                fiBoN = fiBo1 + fiBo2;
+                fiBo1 = fiBo2;
+                fiBo2 = fiBoN;
+                if (fiBo1 === value){
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+</script>
+
+</body>
+</html>

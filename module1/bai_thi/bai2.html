@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(array, number) {
+        let length = array.length;
+        for (let i = 0; i < length; i++) {
+            if (array[i] === number) {
+                array.splice(i, 1);
+            }
+        }
+        return array;
+    }
+
+    let array = [1, 5, 6, 8, 9, 3, 1,7,32, 56, 58,523,58];
+
+    document.write('Mảng số nguyên là: ' + array.join());
+
+    let number = parseInt(prompt("nhap so can tim"));
+    let newArray = tryRemoveFromArray(array, number);
+
+    document.write('<br>Số cần tìm là số : ' + number);
+
+    document.write('<br>Mảng số nguyên khi thực hiện xóa số ' + number + ' là: ' + newArray.join());
+</script>
+
+</body>
+</html>

@@ -34,18 +34,14 @@
     alert(" nhiet do C la : " + tempC1 + " ; nhiet do F la : " + tempF1 + " ; nhiet do Kelvin la : " + tempK1 );
     let temp2=parseFloat(prompt("nhap nhiet do 2"));
     let temperature2 = new Temperature(temp2);
-    let tempC3=temperature2.getTempC();
-    let tempF3=temperature2.getTempF();
-    let tempK3=temperature2.getTempK();
-    alert(" nhiet do C la : " + tempC3 + " ; nhiet do F la : " + tempF3 + " ; nhiet do Kelvin la : " + tempK3 );
+
+    alert(" nhiet do C la : " + temperature2.getTempC() + " ; nhiet do F la : " + temperature2.getTempF()+ " ; nhiet do Kelvin la : " + temperature2.getTempK() );
 
 
    let temp3=parseInt(prompt("nhap nhiet do muon dieu chinh"));
     temperature.setTempC(temp3);
-    tempC=temperature.getTempC();
-    tempF=temperature.getTempF();
-    tempK=temperature.getTempK();
-    alert(" nhiet do C la : " + tempC + " ; nhiet do F la : " + tempF + " ; nhiet do Kelvin la : " + tempK );
+
+    alert(" nhiet do C la : " + temperature.getTempC() + " ; nhiet do F la : " + temperature.getTempF() + " ; nhiet do Kelvin la : " + temperature.getTempK() );
 
 
 

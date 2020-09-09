@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Candidate (Thí sinh) gồm các thuộc tính: mã, tên, ngày tháng năm sinh, điểm thi Toán, Văn, Anh và các phương thức cần thiết</title>
+</head>
+<body>
+<script>
+    class Candidate {
+        constructor(maSV,ten,ngaySinh,diemToan,diemVan,diemAnh){
+           this.maSv= maSV;
+           this.ten= ten;
+           this.ngaySinh = ngaySinh;
+           this.diemToan = diemToan;
+           this.diemVan = diemVan;
+           this.diemAnh = diemAnh;
+
+        }
+        get diemTong(){
+            return this.tinhDiemTong();
+        }
+        tinhDiemTong(){
+            return this.diemToan + this.diemVan+this.this.diemAnh;
+        }
+    }
+</script>
+
+</body>
+</html>

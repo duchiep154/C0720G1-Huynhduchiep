@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhap vao mang so nguyen ko qua 50 phan tu va tinh trung binh cua cac so
+    </title>
+</head>
+<body>
+<script>
+
+    // Cho 1 mảng số nguyên không vướt quá 50 phần tử.
+    // Viết chương trình hiện thị trung bình cộng các số trong mảng chia hết cho  3
+
+
+
+  /*  let arrayInput = [];
+    let total = 0;
+    let avg;
+   // let index = 0;
+    let index = 0;
+
+
+    let doDaiMang;
+    let check = true;
+    do {
+        doDaiMang = parseInt(prompt("Nhập độ dài mảng"));   // kiem tra do dai mang
+        if (doDaiMang > 50) {
+            alert("Mảng nhập quá 50 số ");
+            check = false;
+        } else {
+            for (let i = 0; i < doDaiMang; i++) {
+                arrayInput[i] = parseFloat(prompt("Nhập vào phần tử"));
+                if (arrayInput[i] % 3 === 0) {
+                    total += arrayInput[i];
+                    index++;
+                }
+            }
+            avg = total / index;
+            alert("Giá trị trung bình của các số chia hết cho 3 trong mảng nhập vào là " + avg);
+            alert("Mảng vừa nhập vào là " + arrayInput);
+            check = true;
+        }
+    }
+    while (!check) */
+    let len;
+    let arr = [];
+    let check=true;
+    do {
+        let len =prompt('Enter the length of the array:');
+
+        if (len < 1 || len > 50) {
+            alert("length is not valid!");
+            check=false;
+        } else {
+
+            for(let i = 0; i < len; i++){
+                arr[i] = parseInt(prompt('Input the value of element ' + i));
+            }
+            check=true;
+        }
+
+    }while (!check)
+
+    document.write('The array: ' + arr + "</br>" +'the average of numbers that divided by 3: ' + averageOfNumbersDividedBy3(arr));
+
+
+    function averageOfNumbersDividedBy3(arr){
+        let sum = 0;
+        let count = 0;
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] % 3 === 0){
+                sum += arr[i];
+                count++;
+            }
+        }
+        return sum/count;
+    }
+
+</script>
+</body>
+</html>
