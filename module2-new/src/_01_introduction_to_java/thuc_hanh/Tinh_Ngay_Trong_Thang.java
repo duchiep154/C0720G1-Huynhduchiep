@@ -2,7 +2,7 @@ package _01_introduction_to_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class tinh_ngay_trong_thang {
+public class Tinh_Ngay_Trong_Thang {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
