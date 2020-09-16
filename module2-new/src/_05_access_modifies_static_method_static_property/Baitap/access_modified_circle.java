@@ -1,13 +1,13 @@
 package _05_access_modifies_static_method_static_property.Baitap;
 
-public class AccessModifiedCircle {
+public class access_modified_circle {
     private double radius = 1.0;
     private String color = "red";
 
-    public AccessModifiedCircle(){
+    public access_modified_circle(){
     }
 
-    public void AccessModifiedCircle(double radius){
+    public void access_modified_circle(double radius){
         this.radius = radius;
     }
 
@@ -26,4 +26,3 @@ public class AccessModifiedCircle {
         return (radius*radius*3.14);
     }
 }
-// Thay đổi access modified (trừ private) , còn lại vẫn chạy được
