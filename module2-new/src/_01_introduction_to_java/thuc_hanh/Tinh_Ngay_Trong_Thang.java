@@ -32,7 +32,9 @@ public class Tinh_Ngay_Trong_Thang {
                 daysInMonth = "";
         }
 
-        if (daysInMonth != "") System.out.printf("The month '%d' has %s days!", month, daysInMonth);
-        else System.out.print("Invalid input!");
+        if (daysInMonth != ""){
+            System.out.printf("The month '%d' has %s days!", month, daysInMonth);
+        }else System.out.print("Invalid input!");
+
     }
 }
