@@ -107,13 +107,15 @@ public class ProductManager {
         System.out.println(" nhập tên sản phẩm muốn tìm");
         scanner.nextLine();
         nameSearch=scanner.nextLine();
+        boolean check=true;
         for (Product2 product2 : linkedList) {
             if (nameSearch.equals(product2.getName())) {
                 System.out.println(product2.toString());
-            }else {
-                System.out.println("không có thông tin sản phẩm");
-                break;
+                check=true;
             }
+        }
+        if (!check){
+            System.out.println("không có thông tin sản phẩm");
         }
     }
     // hàm săp xếp
