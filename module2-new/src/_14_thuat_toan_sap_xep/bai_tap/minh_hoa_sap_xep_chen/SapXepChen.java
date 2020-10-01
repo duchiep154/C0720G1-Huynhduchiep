@@ -1,5 +1,7 @@
 package _14_thuat_toan_sap_xep.bai_tap.minh_hoa_sap_xep_chen;
 
+import java.util.Arrays;
+
 public class SapXepChen {
     public void insertionSort(int arr[]) {
         int giaTriChen;
@@ -30,21 +32,22 @@ public class SapXepChen {
             }
 
             System.out.println("Vong lap thu " + index);
-            display(arr);
+            System.out.println(Arrays.toString(arr));
+           // display(arr);
         }
     }
 
-    public void display(int arr[]) {
-
-        System.out.print("[");
-
-        // Duyet qua tat ca phan tu
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-
-        System.out.print("]\n");
-    }
+//    public void display(int arr[]) {
+//
+//        System.out.print("[");
+//
+//        // Duyet qua tat ca phan tu
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//        System.out.print("]\n");
+//    }
 
     public static void main(String[] args) {
         // khoi tao mang arr
@@ -52,12 +55,14 @@ public class SapXepChen {
 
         SapXepChen sapXepChen = new SapXepChen();
         System.out.println("Mang du lieu dau vao: ");
-        sapXepChen.display(arr);
+        System.out.println(Arrays.toString(arr));
+        //sapXepChen.display(arr);
         System.out.println("-----------------------------");
         sapXepChen.insertionSort(arr);
         System.out.println("-----------------------------");
         System.out.println("\nMang sau khi da sap xep: ");
-        sapXepChen.display(arr);
+        System.out.println(Arrays.toString(arr));
+       // sapXepChen.display(arr);
     }
 }
 
