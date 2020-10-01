@@ -7,24 +7,16 @@ public class CVSReader {
 
         String csvFile = "T:\\C0720G1-Huynh_duc_hiep\\module2-new\\src\\_16_IO_text_file\\bai_tap\\doc_file_csv\\danhsachquocda.csv";
         BufferedReader br = null;
+     //   BufferedWriter bw =null;
         String line = "";
         String cvsSplitBy = ",";
+       // File file=new File("T:\\C0720G1-Huynh_duc_hiep\\module2-new\\src\\_16_IO_text_file\\bai_tap\\doc_file_csv\\ghicsvvaotext.txt");
 
         try {
-
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
-
-                // use comma as separator
                 String[] country = line.split(cvsSplitBy);
-                FileWriter myWriter = new FileWriter("filetestIOFile.txt");
-
-                System.out.println("Country [code= " + country[4] + " , name= " + country[5] +", phone = "+country[3]+", DNS 1= " +country[0]+", DNS 2= "+country[1]+"]");
-
-              //  myWriter.write(String.valueOf(country));
-                myWriter.write("Country [code= " + country[4] + " , name= " + country[5] +", phone = "+country[3]+", DNS 1= " +country[0]+", DNS 2= "+country[1]+"]");
-                myWriter.close();
-
+                System.out.println("Country [code= " + country[4] + " , name= " + country[5] +"]");
 
 
             }
@@ -42,7 +34,6 @@ public class CVSReader {
                 }
             }
         }
-
     }
 
 }
