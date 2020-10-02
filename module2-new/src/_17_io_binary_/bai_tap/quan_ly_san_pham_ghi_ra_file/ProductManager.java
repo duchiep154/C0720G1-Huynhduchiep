@@ -48,8 +48,6 @@ public class ProductManager {
 
 
         for (Product product : productList) {
-
-
 //            if (nameFind.equals(product.getName())) {    // tim kiếm chính xác theo name
             // timg kiếm theo bất cứ ký tự nhập vào
             if (product.getName().contains(nameFind)) {
