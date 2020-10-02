@@ -46,7 +46,7 @@ public class CopyFile {
     static void copyFile(String fileCopyNguon, String fileCopyDich) {
         //Đọc từng dòng của File cần sao chép
         try (BufferedReader input = new BufferedReader(new FileReader(fileCopyNguon))) {
-            
+
             //Ghi chép nội dung vào file đích; chép vào text
             try (BufferedWriter output = new BufferedWriter(new FileWriter(fileCopyDich))) {
                 String text = null;

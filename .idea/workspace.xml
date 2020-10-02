@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9a64f0b-0d0a-4c55-8734-cb7c9dcac2fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/module2-new/out/production/module2-new/_06_ke_thua/baiTap/circle/Cylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2-new/out/production/module2-new/_06_ke_thua/baiTap/circle/Cylinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2-new/out/production/module2-new/_06_ke_thua/baiTap/circle/TestCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2-new/out/production/module2-new/_06_ke_thua/baiTap/circle/TestCircle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2-new/out/production/module2-new/_06_ke_thua/baiTap/circle/testCylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2-new/out/production/module2-new/_06_ke_thua/baiTap/circle/testCylinder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2-new/src/_06_ke_thua/baiTap/circle/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2-new/src/_06_ke_thua/baiTap/circle/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2-new/src/_06_ke_thua/baiTap/circle/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2-new/src/_06_ke_thua/baiTap/circle/TestCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2-new/src/_16_IO_text_file/bai_tap/copy_file_text/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2-new/src/_16_IO_text_file/bai_tap/copy_file_text/CopyFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +18,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -40,10 +38,27 @@
       <option name="presentableId" value="Default" />
       <updated>1600264871299</updated>
       <workItem from="1600264873782" duration="55000" />
+      <workItem from="1601543763193" duration="138000" />
+      <workItem from="1601543915274" duration="9000" />
+      <workItem from="1601602966203" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601543861634">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1601543861634" />
+    <state x="620" y="306" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1601543808092">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="620" y="306" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834@0.0.1536.834" timestamp="1601543808092" />
+    <state x="470" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1601543770916">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="470" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1601543770916" />
   </component>
 </project>
