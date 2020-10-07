@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17ed78f1-3219-4bd7-93d2-1fe023908349" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/C0720G1-Huynh_duc_hiep.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloWorld/HelloWorld.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2-new/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module2-new/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/SystemTime.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/out/production/SystemTime/SystemTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/out/production/SystemTime/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/src/SystemTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/SystemTime/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/thuchanh/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/thuchanh/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/thuchanh/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/thuchanh/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/_1.introduction_JAVA/thuchanh/thuchanh.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/module2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/src/thuchanh.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1iLNQmgcpFFxSJyS6NpG5qUPL7m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module2-new" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17ed78f1-3219-4bd7-93d2-1fe023908349" name="Default Changelist" comment="" />
+      <created>1601682898878</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601682898878</updated>
+      <workItem from="1601682906022" duration="507000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1601683410086">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1601683410086" />
+    <state x="209" y="37" key="new project wizard" timestamp="1601683169073">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="209" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1601683169073" />
+  </component>
+</project>

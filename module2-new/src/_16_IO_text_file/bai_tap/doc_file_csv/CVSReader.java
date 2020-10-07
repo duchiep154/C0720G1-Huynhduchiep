@@ -10,8 +10,6 @@ public class CVSReader {
      //   BufferedWriter bw =null;
         String line = "";
         String cvsSplitBy = ",";
-       // File file=new File("T:\\C0720G1-Huynh_duc_hiep\\module2-new\\src\\_16_IO_text_file\\bai_tap\\doc_file_csv\\ghicsvvaotext.txt");
-
         try {
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
@@ -22,7 +20,7 @@ public class CVSReader {
             }
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
