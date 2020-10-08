@@ -1,4 +1,4 @@
-package Models;
+package models;
 //-	Riêng Phòng sẽ có thêm thông tin: Dịch vụ miễn phí đi kèm.
 
 public class Room extends Services {
@@ -12,13 +12,13 @@ public class Room extends Services {
     @Override
     public String toString() {
         return "Room{" +
-                ", id='" + id + '\'' +
+                " id='" + id + '\'' +
                 ", tenDichVu='" + tenDichVu + '\'' +
                 ", dienTichSuDung='" + dienTichSuDung + '\'' +
                 ", giaThue='" + giaThue + '\'' +
                 ", soLuongNguoiThue='" + soLuongNguoiThue + '\'' +
                 ", kieuThue='" + kieuThue + '\'' +
-                ", extraServices=" + extraServices +
+                 extraServices +
                 '}';
     }
 

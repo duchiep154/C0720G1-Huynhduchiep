@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 ///-	Riêng House sẽ có thêm thông tin: Tiêu chuẩn phòng, Mô tả tiện nghi khác, Số tầng.
 public class House extends Services {
@@ -17,15 +17,15 @@ public class House extends Services {
     @Override
     public String toString() {
         return "House{" +
-                ", id='" + id + '\'' +
-                ", tenDichVu='" + tenDichVu + '\'' +
-                ", dienTichSuDung='" + dienTichSuDung + '\'' +
-                ", giaThue='" + giaThue + '\'' +
-                ", soLuongNguoiThue='" + soLuongNguoiThue + '\'' +
-                ", kieuThue='" + kieuThue + '\'' +
-                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
-                ", soTang='" + soTang + '\'' +
+                "id=" + id + '\'' +
+                ",tenDichVu=" + tenDichVu + '\'' +
+                ",dienTichSuDung=" + dienTichSuDung + '\'' +
+                ",giaThue=" + giaThue + '\'' +
+                ",soLuongNguoiThue=" + soLuongNguoiThue + '\'' +
+                ",kieuThue=" + kieuThue + '\'' +
+                ",tieuChuanPhong=" + tieuChuanPhong + '\'' +
+                ",moTaTienNghiKhac=" + moTaTienNghiKhac + '\'' +
+                ",soTang=" + soTang + '\'' +
                 '}';
     }
 

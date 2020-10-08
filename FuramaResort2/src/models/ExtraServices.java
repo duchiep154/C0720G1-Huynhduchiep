@@ -1,25 +1,29 @@
-package Models;
+package models;
 //Ngoài ra, resort còn cung cấp các dịch vụ đi kèm như massage, karaoke, thức ăn, nước uống, thuê xe di chuyển tham quan resort.
 //Dịch vụ đi kèm sẽ bao gồm các thông tin: Tên dịch vụ đi kèm, Đơn vị, Giá tiền
 
 public class ExtraServices {
     private String dichVuDiKem;
     private String donVi;
-    private double giaTien;
+    private String giaTien;
 
-    public ExtraServices(String dichVuDiKem, String donVi, double giaTien) {
+    public ExtraServices(String dichVuDiKem, String donVi, String giaTien) {
         this.dichVuDiKem = dichVuDiKem;
         this.donVi = donVi;
         this.giaTien = giaTien;
     }
 
+    public ExtraServices() {
+
+    }
+
     @Override
     public String toString() {
-        return "ExtraServices{" +
-                "dichVuDiKem='" + dichVuDiKem + '\'' +
+        return
+                ", dichVuDiKem='" + dichVuDiKem + '\'' +
                 ", donVi='" + donVi + '\'' +
-                ", giaTien=" + giaTien +
-                '}';
+                ", giaTien=" + giaTien
+                ;
     }
 
     public String getDichVuDiKem() {
@@ -38,11 +42,11 @@ public class ExtraServices {
         this.donVi = donVi;
     }
 
-    public double getGiaTien() {
+    public String getGiaTien() {
         return giaTien;
     }
 
-    public void setGiaTien(double giaTien) {
+    public void setGiaTien(String giaTien) {
         this.giaTien = giaTien;
     }
 }

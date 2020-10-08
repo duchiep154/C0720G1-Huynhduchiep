@@ -1,4 +1,4 @@
-package Models;
+package models;
 //-	Riêng Villa sẽ có thêm thông tin: Tiêu chuẩn phòng, Mô tả tiện nghi khác, Diện tích hồ bơi, Số tầng.
 
 public class Villa extends Services {
@@ -18,16 +18,16 @@ public class Villa extends Services {
     @Override
     public String toString() {
         return "Villa{" +
-                " id='" + id + '\'' +
-                ", tenDichVu='" + tenDichVu + '\'' +
-                ", dienTichSuDung='" + dienTichSuDung + '\'' +
-                ", giaThue='" + giaThue + '\'' +
-                ", soLuongNguoiThue='" + soLuongNguoiThue + '\'' +
-                ", kieuThue='" + kieuThue + '\'' +
+                "id=" + id + '\'' +
+                ",tenDichVu=" + tenDichVu + '\'' +
+                ",dienTichSuDung=" + dienTichSuDung + '\'' +
+                ",giaThue='" + giaThue + '\'' +
+                ",soLuongNguoiThue='" + soLuongNguoiThue + '\'' +
+                ",kieuThue='" + kieuThue + '\'' +
                 ",tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
-                ", dienTichHoBoi='" + dienTichHoBoi + '\'' +
-                ", soTang='" + soTang + '\'' +
+                ",moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
+                ",dienTichHoBoi='" + dienTichHoBoi + '\'' +
+                ",soTang='" + soTang + '\'' +
                 '}';
     }
 
