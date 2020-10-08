@@ -6,9 +6,7 @@ import models.*;
 import exception.*;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Scanner;
-import java.util.TreeSet;
+import java.util.*;
 
 public class MainController {
     static Scanner input = new Scanner(System.in);
@@ -26,7 +24,9 @@ public class MainController {
                     "4.Show Information of Customer\n" +
                     "5.Add New Booking\n" +
                     "6.Show Information of Employee\n" +
-                    "7.Exit\n" +
+                    "7.buy ticker movie\n" +
+                    "8.Find information Employer\n" +
+                    "9.Exit\n" +
                     "-----------------------------------");
             System.out.print("Chọn: ");
             String chonMenu = input.nextLine();
@@ -49,12 +49,19 @@ public class MainController {
                         addNewBooking();
                         break;
                     case 6:
-                        showInfoEmployee();
+                        showInfoEmployer();
+                        break;
+                    case 7:
+                        buyMovieTicket();
+                        break;
+                    case 8:
+                        findInfoEmployer();
                         break;
 
-                    case 7:
+                    case 9:
                         System.exit(0);
                         break;
+
                     default:
                         System.out.println("Sự lựa chọn không tồn tại. Bạn cần chọn lại");
                 }
@@ -62,7 +69,78 @@ public class MainController {
         } while (true);
     }
 
-    private static void showInfoEmployee() {
+    private static void findInfoEmployer() {
+    }
+
+    // Task 10 : mua vé xem phim sử dụng Queue
+    public static int bienDemVe = 0;
+    public static Queue<Customer> queueCustomer = new LinkedList<>();
+    public static int veMovie=3;
+
+    private static void buyMovieTicket() throws IOException {
+//        int ve=3;
+//        Queue<Customer> queueCustomer=new LinkedList<>();
+//        int bienDemVe = 0;
+        if(bienDemVe < 3){
+            List<Customer> customerList =  showInforCustomer();
+            if(!customerList.isEmpty()){
+                int soThuTu;
+                do{
+                    System.out.println("số vé còn lại "+veMovie);
+                    System.out.println("Chọn số thứ tự Customer muốn đặt vé: ");
+                    String nhap = input.nextLine();
+                    if(kiemTraSoNguyen(nhap)){
+                        soThuTu = Integer.parseInt(nhap);
+                        if(soThuTu > 0 && soThuTu <= customerList.size()){
+                            break;
+                        }
+                    }
+                    System.out.println("Sự lựa chọn của bạn không hợp lệ");
+                } while (true);
+                Customer customer = customerList.get(soThuTu - 1);
+                queueCustomer.add(customer);
+                bienDemVe++;
+                System.out.println("Đặt vé thành công");
+                veMovie--;
+               // buyMovieTicket();
+            } else System.out.println("Hiện không có Customer nào");
+        }
+        if(bienDemVe == 3){
+            System.out.println("Vé xem phim đã được bán hết.\nDanh sách các Customer đã mua vé là:");
+            int bienDem = 1;
+            while (!queueCustomer.isEmpty()){
+                System.out.println("Customer " + bienDem + ". " + queueCustomer.remove().showInfor());
+                bienDem++;
+            }
+            bienDemVe = 0;
+            veMovie=0;
+        }
+
+
+
+    }
+
+    private static void showInfoEmployer() throws IOException {
+        List<Employer> employerList=DocGhiFileCSV.docFileEmployer();
+        Map<String,Employer> map=new TreeMap<>();
+        int bienDem = 1;
+
+        if (!employerList.isEmpty()){
+            for (Employer element :employerList){
+                map.put(element.getMaSo(),element);
+            }
+            System.out.println(" danh sách nhân viên :");
+            // Ví dụ 3: sử dụng Map.Entry interface để truy cập các phần tử của Map
+            for (Map.Entry<String,Employer> entry :map.entrySet()){
+                System.out.println("NV " + bienDem + ". " + entry.getValue());
+                bienDem++;
+
+            }
+        }else {
+            System.out.println(" hiện tại chưa có nhân viên nào");
+        }
+
+
     }
 
     private static void addNewBooking() throws IOException {
@@ -77,9 +155,12 @@ public class MainController {
             do {
                 System.out.print("Nhập số thứ tự Customer bạn muốn chọn: ");
                 nhap = input.nextLine();
-                if (kiemTraSoNguyen(nhap) && Integer.parseInt(nhap) > 0 && Integer.parseInt(nhap) <= customerList.size())
+                if (kiemTraSoNguyen(nhap) && Integer.parseInt(nhap) > 0 && Integer.parseInt(nhap) <= customerList.size()){
                     break;
-                else System.out.println("Lựa chọn của bạn không hợp lệ");
+                }
+                else {
+                    System.out.println("Lựa chọn của bạn không hợp lệ");
+                }
             } while (true);
             Customer customer = customerList.get(Integer.parseInt(nhap) - 1);
             int chon = 0;
@@ -122,13 +203,86 @@ public class MainController {
         } else System.out.println("Hiện chưa có thông tin nào");
     }
 
-    private static void bookingRoom(Customer customer) {
+    private static void bookingRoom(Customer customer) throws IOException {
+        List<Room> roomList=DocGhiFileCSV.docFileRoom();
+        if (!roomList.isEmpty()){
+            int biendem=1;
+            for (Room element : roomList ) {
+                System.out.println(biendem+".Room "+" "+element);
+                biendem++;
+            }
+            String nhap;
+            do {
+                System.out.println("nhập số thứ tự Room bạn muốn chọn");
+                nhap=input.nextLine();
+                if (kiemTraSoNguyen(nhap)&& Integer.parseInt(nhap) >0 && Integer.parseInt(nhap)<=roomList.size()){
+                    break;
+                } else {
+                    System.out.println(" sự lựa chọn của bạn không chính xác ");
+                }
+
+            }while (true);
+            customer.setDichVu(roomList.get(Integer.parseInt(nhap)-1));
+            DocGhiFileCSV.ghiFileBooking(customer);
+            System.out.println("đã thêm thành công ");
+        }else {
+            System.out.println(" hiện chưa có thông tin house nào, vui lòng thêm dịch vụ ");
+        }
     }
 
-    private static void bookingHouse(Customer customer) {
+    private static void bookingHouse(Customer customer) throws IOException {
+        List<House> houseList=DocGhiFileCSV.docFileHouse();
+        if (!houseList.isEmpty()){
+            int biendem =1;
+            for (House element : houseList){
+                System.out.println(biendem+".House "+ biendem +" "+element);
+                biendem++;
+            }
+            String nhap;
+            do {
+                System.out.println("nhập số thứ tự House bạn muốn chọn");
+                nhap=input.nextLine();
+                if (kiemTraSoNguyen(nhap)&& Integer.parseInt(nhap) >0 && Integer.parseInt(nhap)<=houseList.size()){
+                    break;
+                } else {
+                    System.out.println(" sự lựa chọn của bạn không chính xác ");
+                }
+            }while (true);
+            customer.setDichVu(houseList.get(Integer.parseInt(nhap)-1));
+            DocGhiFileCSV.ghiFileBooking(customer);
+            System.out.println("đã thêm thành công");
+        }else {
+            System.out.println(" hiện chưa có thông tin house nào, vui lòng thêm dịch vụ ");
+        }
     }
 
-    private static void bookingVilla(Customer customer) {
+    private static void bookingVilla(Customer customer) throws IOException {
+        List<Villa> villaList = DocGhiFileCSV.docFileVilla();
+        if (!villaList.isEmpty()) {
+            int bienDem = 1;
+            for (Villa element : villaList) {
+                System.out.println(bienDem + ". Villa " + bienDem + " " + element);
+                bienDem++;
+            }
+            String nhap;
+            do {
+                System.out.print("Nhập số thứ tự Villa bạn muốn chọn: ");
+                nhap = input.nextLine();
+                if (kiemTraSoNguyen(nhap) && Integer.parseInt(nhap) > 0 && Integer.parseInt(nhap) <= villaList.size())
+                    break;
+                else {
+                    System.out.println("Lựa chọn của bạn không hợp lệ");
+                }
+            } while (true);
+
+            customer.setDichVu(villaList.get(Integer.parseInt(nhap) - 1));
+
+            DocGhiFileCSV.ghiFileBooking(customer);
+            System.out.println("đã thêm thành công");
+        } else {
+            System.out.println("Hiện chưa có thông tin của Villa nào");
+        }
+
     }
 
 

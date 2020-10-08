@@ -8,14 +8,14 @@ package models;
 //3.	Xây dựng phương thức showInformationCustomers() cho phép người dùng sau khi chọn sẽ hiển thị ra toàn bộ thông tin của các Customer có trong file Customer.CSV.
 
 public class Customer {
-    String hoTen;
-    String ngaySinh;
-    String gioiTinh;
-    String cmnd;
-    String soDT;
-    String email;
-    String loaiKhach;
-    String diaChi;
+    private String hoTen;
+    private String ngaySinh;
+    private String gioiTinh;
+    private String cmnd;
+    private String soDT;
+    private String email;
+    private String loaiKhach;
+    private String diaChi;
     Services dichVu;
 
     public Customer() {

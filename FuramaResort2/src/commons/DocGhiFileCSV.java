@@ -11,6 +11,8 @@ public class DocGhiFileCSV {
     public static final String VILLA_CSV = "T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\Villa.csv";
     public static final String ROOM_CSV = "T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\Room.csv";
     public static final String CUSTOMER_CSV="T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\Customer.csv";
+    public static final String BOOKING_CSV="T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\data\\Booking.csv";
+    public static final String EMPLOYER_CSV="T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\data\\Employer.csv";
     public static final String DAU_PHAY = ",";
 
     public static void writeFile(String pathFile, String line) {
@@ -201,6 +203,45 @@ public class DocGhiFileCSV {
         }
         return customerList;
 
+    }
+    public static void ghiFileBooking(Customer customer) throws IOException {
+        File file = new File(BOOKING_CSV);
+        BufferedWriter bufferedWriter = null;
+        try {
+            FileWriter fileWriter = new FileWriter(file, true);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(customer.getHoTen()).append(DAU_PHAY).append(customer.getNgaySinh()).append(DAU_PHAY).append(customer.getGioiTinh()).append(DAU_PHAY).append(customer.getCmnd()).append(DAU_PHAY).append(customer.getSoDT()).append(DAU_PHAY).append(customer.getEmail()).append(DAU_PHAY).append(customer.getLoaiKhach()).append(DAU_PHAY).append(customer.getDiaChi()).append(" === Dịch vụ: ").append(customer.getDichVu());
+            bufferedWriter.write(stringBuilder.toString());
+            bufferedWriter.append("\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        }
+    }
+    public static List<Employer> docFileEmployer() throws IOException {
+        List<Employer> employeeList = new ArrayList<>();
+        File file = new File(EMPLOYER_CSV);
+        BufferedReader bufferedReader = null;
+        try {
+            FileReader fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String dong = bufferedReader.readLine();
+            String[] mang;
+            while ((dong = bufferedReader.readLine()) != null) {
+                mang = dong.split(DAU_PHAY);
+                Employer employee = new Employer(mang[0],mang[1], mang[2], mang[3]);
+                employeeList.add(employee);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            assert bufferedReader != null;
+            bufferedReader.close();
+        }
+        return employeeList;
     }
 
 
