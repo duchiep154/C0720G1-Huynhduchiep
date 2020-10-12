@@ -11,17 +11,18 @@ import commons.DocGhiFileCSV;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 import java.util.Stack;
 
 public class HoSoEmployer {
-    private static Stack<Employer> employerStack=new Stack<>();
+    public static Stack<Employer> stack=new Stack<>();
 
 
 
     public HoSoEmployer() throws IOException {
         List<Employer> employeeList = DocGhiFileCSV.docFileEmployer();
         for(Employer element : employeeList){
-            employerStack.push(element);
+            stack.push(element);
         }
     }
 

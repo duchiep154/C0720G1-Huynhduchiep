@@ -69,7 +69,26 @@ public class MainController {
         } while (true);
     }
 
-    private static void findInfoEmployer() {
+    private static void findInfoEmployer() throws IOException {
+        HoSoEmployer hoSoEmployer = new HoSoEmployer();
+        if(!hoSoEmployer.stack.empty()){
+            boolean xacNhan = true;
+            System.out.println("Nhập mã số nhân viên bạn muốn tìm hồ sơ: ");
+            String maSo = input.nextLine();
+            while (!hoSoEmployer.stack.empty()){
+                Employer employer = hoSoEmployer.stack.pop();
+                if(maSo.equals(employer.getMaSo())){
+                    xacNhan = false;
+                    System.out.println("Hồ sơ nhân viên cần tìm là: \n" + employer);
+                    break;
+                }
+            }
+            if(xacNhan){
+                System.out.println("Nhân viên bạn tìm không có trong hệ thống");
+            }
+        } else System.out.println("Tủ Hồ Sơ đang trống");
+
+
     }
 
     // Task 10 : mua vé xem phim sử dụng Queue
@@ -198,9 +217,13 @@ public class MainController {
                         default:
                             System.out.println("Sự lựa chọn không tồn tại. Bạn cần chọn lại");
                     }
-                } else System.out.println("Lựa chọn không tồn tại");
+                } else {
+                    System.out.println("Lựa chọn không tồn tại");
+                }
             } while (true);
-        } else System.out.println("Hiện chưa có thông tin nào");
+        } else {
+            System.out.println("Hiện chưa có thông tin nào");
+        }
     }
 
     private static void bookingRoom(Customer customer) throws IOException {
