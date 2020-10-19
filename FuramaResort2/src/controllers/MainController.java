@@ -14,7 +14,7 @@ public class MainController {
 
         // ham hien thi mainmenu
 
-    public static void displayMainMenu() throws IOException {
+    public static void displayMainMenu() throws IOException, EmailException {
         int chon = 0;
         do {
             System.out.println("-------------Menu-----------------\n" +
@@ -40,7 +40,7 @@ public class MainController {
                         showServices();
                         break;
                     case 3:
-                        addNewCustomer();
+                         addNewCustomer();
                         break;
                     case 4:
                         showInforCustomer();
@@ -162,7 +162,7 @@ public class MainController {
 
     }
 
-    private static void addNewBooking() throws IOException {
+    private static void addNewBooking() throws IOException, EmailException {
         List<Customer> customerList = DocGhiFileCSV.docFileCustomer();
         if (!customerList.isEmpty()) {
             int bienDem = 1;
@@ -324,7 +324,7 @@ public class MainController {
 
     }
 
-    private static void addNewCustomer() throws IOException {
+    private static void addNewCustomer() throws IOException, EmailException {
         String hoTen=kiemTraName();
         String ngaySinh=kiemTraNgaySinh();
         String gioiTinh=kiemTraGioiTinh();
@@ -345,7 +345,7 @@ public class MainController {
 
 
 
-    private static void showServices() throws IOException {
+    private static void showServices() throws IOException, EmailException {
         int chon = 0;
         do {
             System.out.println("-------------Menu-----------------\n" +
@@ -479,7 +479,7 @@ public class MainController {
     }
 
     // ham add new service
-    private static void addNewServices() throws IOException {
+    private static void addNewServices() throws IOException, EmailException {
         int chon = 0;
         do {
             System.out.println("-------------Menu-----------------\n" +
@@ -702,7 +702,7 @@ public class MainController {
         } while (true);
         return ngaySinh;
     }
-    public static String kiemTraEmail() {
+    public static String kiemTraEmail() throws EmailException {
         String email;
         do {
             try {
