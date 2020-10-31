@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DocGhiFileCSV {
-    public static final String HOUSE_CSV = "T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\House.csv";
-    public static final String VILLA_CSV = "T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\Villa.csv";
-    public static final String ROOM_CSV = "T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\Room.csv";
-    public static final String CUSTOMER_CSV="T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\Data\\Customer.csv";
-    public static final String BOOKING_CSV="T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\data\\Booking.csv";
-    public static final String EMPLOYER_CSV="T:\\C0720G1-Huynh_duc_hiep\\FuramaResort2\\src\\data\\Employer.csv";
+    public static final String HOUSE_CSV = "T:\\C0720G1-Huynhduchiep\\FuramaResort2\\src\\data\\House.csv";
+    public static final String VILLA_CSV = "T:\\C0720G1-Huynhduchiep\\FuramaResort2\\src\\data\\Villa.csv";
+    public static final String ROOM_CSV = "T:\\C0720G1-Huynhduchiep\\FuramaResort2\\src\\data\\Room.csv";
+    public static final String CUSTOMER_CSV="T:\\C0720G1-Huynhduchiep\\FuramaResort2\\src\\data\\Customer.csv";
+    public static final String BOOKING_CSV="T:\\C0720G1-Huynhduchiep\\FuramaResort2\\src\\data\\Booking.csv";
+    public static final String EMPLOYER_CSV="T:\\C0720G1-Huynhduchiep\\FuramaResort2\\src\\data\\Employer.csv";
     public static final String DAU_PHAY = ",";
 
     public static void writeFile(String pathFile, String line) {

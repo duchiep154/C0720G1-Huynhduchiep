@@ -1,5 +1,7 @@
 package controllers;
 
+import exception.EmailException;
+
 import java.io.IOException;
 
 public class maintest {
@@ -7,7 +9,7 @@ public class maintest {
         MainController mainController=new MainController();
         try {
             MainController.displayMainMenu();
-        } catch (IOException e) {
+        } catch (IOException | EmailException e) {
             e.printStackTrace();
         }
     }

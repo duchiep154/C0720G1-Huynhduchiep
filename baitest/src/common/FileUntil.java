@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileUntil {
-    private static final String SINH_VIEN_FILE="T:\\C0720G1-Huynh_duc_hiep\\baitest\\src\\data\\SinhVien.csv";
-    private static final String LOP_HOC_FILE="T:\\C0720G1-Huynh_duc_hiep\\baitest\\src\\data\\LopHoc.csv";
-    private static final String GIAO_VIEN_FILE="T:\\C0720G1-Huynh_duc_hiep\\baitest\\src\\data\\GiaoVien.csv";
+    private static final String SINH_VIEN_FILE="T:\\C0720G1-Huynhduchiep\\baitest\\src\\data\\SinhVien.csv";
+    private static final String LOP_HOC_FILE="T:\\C0720G1-Huynhduchiep\\baitest\\src\\data\\LopHoc.csv";
+    private static final String GIAO_VIEN_FILE="T:\\C0720G1-Huynhduchiep\\baitest\\src\\data\\GiaoVien.csv";
     private static final String DAU_PHAY=",";
 
 

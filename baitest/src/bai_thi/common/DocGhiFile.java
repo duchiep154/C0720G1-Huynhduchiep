@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DocGhiFile {
-    private static final String SPNHAPKHAU="T:\\C0720G1-Huynh_duc_hiep\\baitest\\src\\bai_thi\\data\\SanPhamNhapKhau.csv";
-    private static final String SPXUATKHAU="T:\\C0720G1-Huynh_duc_hiep\\baitest\\src\\bai_thi\\data\\SanPhamXuatKhau.csv";
+    private static final String SPNHAPKHAU="T:\\C0720G1-Huynhduchiep\\baitest\\src\\bai_thi\\data\\SanPhamNhapKhau.csv";
+    private static final String SPXUATKHAU="T:\\C0720G1-Huynhduchiep\\baitest\\src\\bai_thi\\data\\SanPhamXuatKhau.csv";
     private static final String DAU_PHAY=",";
 
     public static void ghiFileNhapKhau(List<SanPhamNhapKhau> danhSachNK){
